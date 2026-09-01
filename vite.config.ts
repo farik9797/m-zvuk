@@ -4,8 +4,10 @@ import path from 'path';
 import {defineConfig} from 'vite';
 
 export default defineConfig(() => {
+  // На GitHub Pages сайт живёт в подпапке /m-zvuk/, локально — по относительным путям.
+  const base = process.env.GITHUB_PAGES === 'true' ? '/m-zvuk/' : './';
   return {
-    base: './',
+    base,
     plugins: [react(), tailwindcss()],
     resolve: {
       alias: {
