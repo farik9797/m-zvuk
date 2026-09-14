@@ -6,7 +6,7 @@ import {
   ArrowLeftRight, Menu, X, ChevronDown, Database, Volume2, 
   Sparkles, ShieldCheck, Zap, Speaker, Mic, Sliders, Radio, Headphones, Cable, ArrowRight, Guitar, Piano, Drum
 } from 'lucide-react';
-import { MOCK_CATEGORIES } from '../../data/mockData';
+import { MOCK_CATEGORIES, getCategoryProductCount } from '../../data/mockData';
 import logoUrl from '../../assets/logo.png';
 
 export const Header: React.FC = () => {
@@ -392,7 +392,7 @@ export const Header: React.FC = () => {
                               {cat.name}
                             </h4>
                             <span className="text-[10px] font-bold text-slate-400 group-hover:text-orange-500 bg-slate-50 group-hover:bg-orange-100/70 px-1.5 py-0.5 rounded-full shrink-0">
-                              {cat.productCount}
+                              {getCategoryProductCount(cat.id)}
                             </span>
                           </div>
                           <p className="text-[11px] text-slate-500 line-clamp-1 mt-0.5 font-normal leading-tight">

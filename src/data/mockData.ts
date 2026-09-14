@@ -5,6 +5,7 @@ import guitarAmpImg from '../assets/products/guitar-amp.jpg';
 import synthImg from '../assets/products/synth.jpg';
 import pianoDigitalImg from '../assets/products/piano-digital.jpg';
 import drumsImg from '../assets/products/drums.jpg';
+import micStandImg from '../assets/products/mic-stand.jpg';
 
 import { Product, Category, ServiceItem, NewsItem, ArticleItem, CertificateItem, FAQItem, PartnerBrand } from '../types';
 
@@ -102,6 +103,275 @@ export const MOCK_CATEGORIES: Category[] = [
 ];
 
 export const MOCK_PRODUCTS: Product[] = [
+  {
+    id: 'prod-116',
+    sku: 'KM-210-9-BK',
+    name: 'K&M 210/9 — Микрофонная стойка «журавль»',
+    category: 'racks-stands',
+    brand: 'K&M',
+    priceBYN: 129,
+    oldPriceBYN: 169,
+    badge: 'DISCOUNT',
+    discountPercent: 24,
+    rating: 4.8,
+    reviewsCount: 18,
+    inStock: true,
+    stockCount: 14,
+    image: micStandImg,
+    additionalImages: [micStandImg],
+    shortDesc: 'Немецкий стандарт для сцены и студии: стальная конструкция, регулируемая стрела, надёжные фиксаторы.',
+    fullDesc: 'Модель 210/9 — рабочая лошадка концертных площадок и студий: выдерживает тяжёлые микрофоны, не съезжает под нагрузкой, складывается для перевозки. Треножное основание устойчиво даже на неровной сцене.',
+    specs: [
+      { name: 'Тип', value: 'напольная стойка с журавлём' },
+      { name: 'Высота', value: '890–1600 мм' },
+      { name: 'Длина стрелы', value: '425–775 мм' },
+      { name: 'Материал', value: 'сталь, чёрное покрытие' },
+      { name: 'Вес', value: '2,3 кг' },
+      { name: 'Резьба', value: '3/8" с переходником 5/8"' }
+    ],
+    tags: ['K&M', 'микрофонная стойка', 'сцена', 'студия', 'аксессуары'],
+    warrantyMonths: 24,
+    isPopular: true,
+    reviews: []
+  },
+  {
+    id: 'prod-108',
+    sku: 'YAM-TRBX174-BL',
+    name: 'Yamaha TRBX174 — Бас-гитара 4 струны',
+    category: 'guitars',
+    brand: 'Yamaha',
+    priceBYN: 990,
+    rating: 4.7,
+    reviewsCount: 9,
+    inStock: true,
+    stockCount: 4,
+    image: guitarElectric2Img,
+    additionalImages: [guitarElectric2Img],
+    shortDesc: 'Классическая связка P/J-звукоснимателей, лёгкий корпус из тополя — универсальный бас для репетиций и сцены.',
+    fullDesc: 'TRBX174 закрывает почти любой стиль: сплит-звукосниматель даёт плотный низ для рока и поп-музыки, джазовый сингл у бриджа добавляет характерную середину для фанка. Гриф удобного профиля и небольшой вес делают инструмент подходящим для первого баса.',
+    specs: [
+      { name: 'Тип', value: 'бас-гитара, 4 струны' },
+      { name: 'Корпус', value: 'тополь' },
+      { name: 'Гриф / накладка', value: 'клён / палисандр' },
+      { name: 'Звукосниматели', value: 'split (P) + single (J)' },
+      { name: 'Мензура', value: '864 мм (34")' },
+      { name: 'Регуляторы', value: '2 громкости, тембр' }
+    ],
+    tags: ['Yamaha', 'бас-гитара', 'для начинающих', 'репетиции'],
+    warrantyMonths: 24,
+    reviews: []
+  },
+  {
+    id: 'prod-109',
+    sku: 'VAL-VC204-NAT',
+    name: 'Valencia VC204 — Классическая гитара 4/4',
+    category: 'guitars',
+    brand: 'Valencia',
+    priceBYN: 269,
+    rating: 4.5,
+    reviewsCount: 34,
+    inStock: true,
+    stockCount: 11,
+    image: guitarAcousticImg,
+    additionalImages: [guitarAcousticImg],
+    shortDesc: 'Нейлоновые струны, полноразмерный корпус 4/4 — стандартный выбор для музыкальной школы.',
+    fullDesc: 'Классическая гитара для учеников школ искусств и тех, кто начинает с нейлона. Нейлоновые струны мягче для пальцев, чем металл, поэтому такой инструмент часто рекомендуют детям на первый год занятий. Доступны размеры 1/2 и 3/4 — подбираем по росту ребёнка.',
+    specs: [
+      { name: 'Тип', value: 'классическая гитара' },
+      { name: 'Размер', value: '4/4 (есть 1/2 и 3/4)' },
+      { name: 'Верхняя дека', value: 'ель' },
+      { name: 'Корпус', value: 'линден' },
+      { name: 'Струны', value: 'нейлон' },
+      { name: 'Количество ладов', value: '19' }
+    ],
+    tags: ['Valencia', 'классическая гитара', 'нейлон', 'музыкальная школа', 'для детей'],
+    warrantyMonths: 12,
+    isPopular: true,
+    reviews: [
+      {
+        id: 'rev-109-1',
+        author: 'Ирина В.',
+        rating: 5,
+        date: '28.08.2026',
+        text: 'Брали дочке в первый класс музыкальной школы размер 3/4. Помогли подобрать по росту прямо в магазине, струны мягкие — пальцы не режет.',
+        verified: true
+      }
+    ]
+  },
+  {
+    id: 'prod-110',
+    sku: 'CORT-UKE-SOP',
+    name: 'Cort Soprano — Укулеле сопрано',
+    category: 'guitars',
+    brand: 'Cort',
+    priceBYN: 149,
+    rating: 4.6,
+    reviewsCount: 17,
+    inStock: true,
+    stockCount: 15,
+    image: guitarAcousticImg,
+    additionalImages: [guitarAcousticImg],
+    shortDesc: 'Компактный инструмент для начинающих: четыре нейлоновые струны, лёгкий корпус, быстрый старт.',
+    fullDesc: 'Укулеле сопрано — самый простой способ начать играть: три аккорда осваиваются за вечер, инструмент помещается в рюкзак. Часто берут как второй инструмент гитаристы и как первый — дети от шести лет.',
+    specs: [
+      { name: 'Тип', value: 'укулеле, сопрано' },
+      { name: 'Корпус', value: 'махагони' },
+      { name: 'Струны', value: 'нейлон, 4' },
+      { name: 'Количество ладов', value: '12' },
+      { name: 'Длина', value: '53 см' }
+    ],
+    tags: ['Cort', 'укулеле', 'для детей', 'подарок'],
+    warrantyMonths: 12,
+    reviews: []
+  },
+  {
+    id: 'prod-111',
+    sku: 'CAS-CDPS110-BK',
+    name: 'Casio CDP-S110 — Цифровое пианино 88 клавиш',
+    category: 'keys',
+    brand: 'Casio',
+    priceBYN: 1290,
+    oldPriceBYN: 1490,
+    badge: 'DISCOUNT',
+    discountPercent: 13,
+    rating: 4.6,
+    reviewsCount: 24,
+    inStock: true,
+    stockCount: 6,
+    image: pianoDigitalImg,
+    additionalImages: [pianoDigitalImg],
+    shortDesc: 'Одно из самых компактных пианино с молоточковой механикой — глубина корпуса всего 23 см.',
+    fullDesc: 'CDP-S110 подойдёт там, где мало места: корпус тоньше большинства конкурентов, при этом клавиатура полноразмерная, со взвешенной молоточковой механикой. Работает от батареек — удобно, если инструмент возят на занятия или выступления.',
+    specs: [
+      { name: 'Тип', value: 'цифровое пианино' },
+      { name: 'Клавиатура', value: '88 клавиш, Scaled Hammer Action' },
+      { name: 'Полифония', value: '64 голоса' },
+      { name: 'Тембры', value: '10' },
+      { name: 'Питание', value: 'адаптер или 6 батареек AA' },
+      { name: 'Глубина корпуса', value: '232 мм' }
+    ],
+    tags: ['Casio', 'цифровое пианино', '88 клавиш', 'компактное', 'для дома'],
+    warrantyMonths: 24,
+    reviews: []
+  },
+  {
+    id: 'prod-112',
+    sku: 'KRG-MINILOGUE-XD',
+    name: 'Korg minilogue xd — Аналоговый синтезатор',
+    category: 'keys',
+    brand: 'Korg',
+    priceBYN: 2190,
+    badge: 'NEW',
+    rating: 4.8,
+    reviewsCount: 7,
+    inStock: true,
+    stockCount: 2,
+    image: synthImg,
+    additionalImages: [synthImg],
+    shortDesc: 'Четырёхголосный аналоговый синтезатор с цифровым мультидвижком и встроенными эффектами.',
+    fullDesc: 'minilogue xd соединяет аналоговый тракт с цифровым осциллятором: можно получить классический тёплый бас и тут же — современные цифровые текстуры. Секвенсор на 16 шагов с motion-записью и встроенные ревербератор, дилей и модуляция позволяют работать без внешней обработки.',
+    specs: [
+      { name: 'Тип', value: 'аналоговый синтезатор' },
+      { name: 'Клавиатура', value: '37 клавиш' },
+      { name: 'Полифония', value: '4 голоса' },
+      { name: 'Осцилляторы', value: '2 аналоговых + цифровой мультидвижок' },
+      { name: 'Секвенсор', value: '16 шагов, motion-запись' },
+      { name: 'Эффекты', value: 'reverb, delay, modulation' }
+    ],
+    tags: ['Korg', 'синтезатор', 'аналоговый', 'студия', 'электронная музыка'],
+    warrantyMonths: 24,
+    isNew: true,
+    reviews: []
+  },
+  {
+    id: 'prod-113',
+    sku: 'YAM-PSRE383',
+    name: 'Yamaha PSR-E383 — Синтезатор 61 клавиша',
+    category: 'keys',
+    brand: 'Yamaha',
+    priceBYN: 749,
+    rating: 4.7,
+    reviewsCount: 31,
+    inStock: true,
+    stockCount: 9,
+    image: synthImg,
+    additionalImages: [synthImg],
+    shortDesc: 'Обучающий синтезатор с чувствительной к касанию клавиатурой, 650 тембрами и уроками.',
+    fullDesc: 'PSR-E383 — частый первый синтезатор для дома: клавиатура реагирует на силу нажатия, что сразу приучает к динамике, а встроенные уроки и аккомпанементы помогают заниматься без преподавателя между уроками. Подключается к компьютеру и планшету по USB.',
+    specs: [
+      { name: 'Тип', value: 'синтезатор, обучающий' },
+      { name: 'Клавиатура', value: '61 клавиша, чувствительная к касанию' },
+      { name: 'Полифония', value: '48 голосов' },
+      { name: 'Тембры', value: '650' },
+      { name: 'Стили аккомпанемента', value: '260' },
+      { name: 'Разъёмы', value: 'наушники, USB to Host, педаль' }
+    ],
+    tags: ['Yamaha', 'синтезатор', 'для обучения', 'для дома', 'детям'],
+    warrantyMonths: 24,
+    isPopular: true,
+    reviews: []
+  },
+  {
+    id: 'prod-114',
+    sku: 'ROL-TD02K',
+    name: 'Roland TD-02K — Электронная барабанная установка',
+    category: 'drums',
+    brand: 'Roland',
+    priceBYN: 1690,
+    rating: 4.8,
+    reviewsCount: 13,
+    inStock: true,
+    stockCount: 3,
+    image: drumsImg,
+    additionalImages: [drumsImg],
+    shortDesc: 'Тихие занятия дома: резиновые пэды, звуковой модуль Roland и встроенные упражнения.',
+    fullDesc: 'TD-02K берут, когда акустическая установка невозможна из-за соседей. Модуль содержит фирменные звуки Roland и набор упражнений с оценкой точности, а играть можно в наушниках в любое время суток. Компактная рама складывается, если комнату нужно освободить.',
+    specs: [
+      { name: 'Тип', value: 'электронная ударная установка' },
+      { name: 'Конфигурация', value: 'малый, 3 тома, хай-хэт, крэш, райд, бочка' },
+      { name: 'Модуль', value: 'TD-02, 16 наборов' },
+      { name: 'Функции', value: 'упражнения с оценкой, метроном, Bluetooth-аудио' },
+      { name: 'Подключение', value: 'наушники, линейный выход, USB' }
+    ],
+    tags: ['Roland', 'электронные барабаны', 'тихие занятия', 'для дома', 'наушники'],
+    warrantyMonths: 24,
+    isPopular: true,
+    reviews: [
+      {
+        id: 'rev-114-1',
+        author: 'Павел Ж.',
+        rating: 5,
+        date: '01.09.2026',
+        text: 'Живу в панельном доме, акустику было не поставить. Занимаюсь в наушниках вечером — соседи не слышат. Пэды отзывчивые, для обучения более чем достаточно.',
+        verified: true
+      }
+    ]
+  },
+  {
+    id: 'prod-115',
+    sku: 'MNL-CAJON-STD',
+    name: 'Meinl Headliner — Кахон',
+    category: 'drums',
+    brand: 'Meinl',
+    priceBYN: 329,
+    rating: 4.7,
+    reviewsCount: 22,
+    inStock: true,
+    stockCount: 7,
+    image: drumsImg,
+    additionalImages: [drumsImg],
+    shortDesc: 'Перкуссия для акустических составов: бас и щелчок в одном корпусе, играть можно сидя сверху.',
+    fullDesc: 'Кахон заменяет полноценную ударную установку в акустических составах и на репетициях без подзвучки: удар по центру даёт бас, по краю — щелчок вместо малого барабана. Берут в кавер-группы, на уличные выступления и в музыкальные школы для занятий ритмом.',
+    specs: [
+      { name: 'Тип', value: 'кахон' },
+      { name: 'Корпус', value: 'берёза' },
+      { name: 'Передняя панель', value: 'сменная, с фиксированными струнами' },
+      { name: 'Габариты', value: '470 × 300 × 300 мм' }
+    ],
+    tags: ['Meinl', 'кахон', 'перкуссия', 'акустика', 'для репетиций'],
+    warrantyMonths: 12,
+    reviews: []
+  },
   {
     id: 'prod-101',
     sku: 'FEN-PL2-ST-BK',
@@ -1006,3 +1276,9 @@ export const MOCK_PARTNERS: PartnerBrand[] = [
     featuredCategory: 'Системы оповещения'
   }
 ];
+
+
+/** Фактическое число товаров в категории.
+ *  Поле Category.productCount остаётся для данных из 1С, но на витрине показываем реальность. */
+export const getCategoryProductCount = (categoryId: string): number =>
+  MOCK_PRODUCTS.filter(p => p.category === categoryId).length;

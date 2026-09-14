@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../../context/AppContext';
-import { MOCK_CATEGORIES, MOCK_PRODUCTS } from '../../data/mockData';
+import { MOCK_CATEGORIES, MOCK_PRODUCTS, getCategoryProductCount } from '../../data/mockData';
 import { SlidersHorizontal, RotateCcw, Check, ChevronDown } from 'lucide-react';
 import { ProductBadge } from '../../types';
 
@@ -75,7 +75,7 @@ export const CatalogFilterSidebar: React.FC = () => {
               }`}
             >
               <span className="truncate">{cat.name}</span>
-              <span className="text-[10px] opacity-70 ml-2">{cat.productCount}</span>
+              <span className="text-[10px] opacity-70 ml-2">{getCategoryProductCount(cat.id)}</span>
             </button>
           ))}
         </div>

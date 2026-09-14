@@ -1,6 +1,6 @@
 import React from 'react';
 import { useApp } from '../../context/AppContext';
-import { MOCK_CATEGORIES } from '../../data/mockData';
+import { MOCK_CATEGORIES, getCategoryProductCount } from '../../data/mockData';
 import { Speaker, Mic, Sliders, Radio, Headphones, Volume2, Cable, ArrowRight, Guitar, Piano, Drum } from 'lucide-react';
 
 const ICON_MAP: Record<string, React.ReactNode> = {
@@ -43,7 +43,7 @@ export const CategoriesGrid: React.FC = () => {
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-4">
-        {MOCK_CATEGORIES.map(cat => (
+        {MOCK_CATEGORIES.filter(cat => getCategoryProductCount(cat.id) > 0).map(cat => (
           <div
             key={cat.id}
             onClick={() => handleCategorySelect(cat.id)}
@@ -54,7 +54,7 @@ export const CategoriesGrid: React.FC = () => {
                 {ICON_MAP[cat.iconName] || <Volume2 className="w-6 h-6" />}
               </div>
               <span className="text-[11px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full group-hover:bg-orange-100 group-hover:text-orange-700 transition-colors">
-                {cat.productCount} тов.
+                {getCategoryProductCount(cat.id)} тов.
               </span>
             </div>
 

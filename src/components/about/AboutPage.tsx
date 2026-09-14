@@ -14,10 +14,10 @@ export const AboutPage: React.FC = () => {
             О компании mzvuk.by
           </span>
           <h1 className="text-3xl md:text-4xl font-black text-white tracking-tight">
-            ООО «Арт-Медиа Трейд» — Интегратор звуковых систем в Беларуси
+            ООО «Арт-Медиа Трейд» — инструменты и звук для Беларуси
           </h1>
           <p className="text-xs md:text-sm text-slate-300 leading-relaxed">
-            С 2014 года наша компания поставляет профессиональное звуковое, трансляционное и студийное оборудование для концертных залов, ресторанов, спортивных комплексов и учебных заведений Республики Беларусь.
+            Магазин, склад и сервисный центр в Гродно. Продаём музыкальные инструменты — гитары, клавишные, ударные — и профессиональное звуковое оборудование: от микрофона для репетиционной точки до комплексного оснащения зала. Отгружаем по всей Беларуси.
           </p>
         </div>
       </div>
@@ -25,10 +25,10 @@ export const AboutPage: React.FC = () => {
       {/* Stats Grid */}
       <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
         {[
-          { number: '12+ лет', label: 'Успешного опыта на рынке РБ' },
-          { number: '1500+', label: 'Реализованных проектов' },
-          { number: '50+ брендов', label: 'Официальные поставки' },
-          { number: '100% НДС', label: 'Работаем с Юридическими лицами' },
+          { number: 'Гродно', label: 'Магазин, склад и сервисный центр' },
+          { number: '1–2 дня', label: 'Доставка по Беларуси' },
+          { number: '0%', label: 'Рассрочка до 12 месяцев' },
+          { number: 'НДС 20%', label: 'Работаем с юридическими лицами' },
         ].map((stat, i) => (
           <div key={i} className="p-6 bg-white rounded-2xl border border-slate-200 text-center space-y-1 shadow-sm">
             <span className="text-3xl font-black text-orange-600 block">{stat.number}</span>
@@ -42,20 +42,20 @@ export const AboutPage: React.FC = () => {
         <div className="space-y-4">
           <h2 className="text-2xl font-black text-slate-900">Наша миссия и ценности</h2>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Мы стремимся обеспечивать белорусский рынок самым качественным аудиооборудованием мировых брендов, предлагая честные цены с НДС, гарантийную поддержку и безупречный инженерный сервис.
+            Мы не просто продаём коробки. Перед выдачей мастер отстраивает инструмент — выставляет строй, высоту струн, проверяет электронику. Для зала считаем мощность под площадь и назначение, а не продаём «что подороже». Если инструмент замолчит позже, чиним в своей мастерской и даём подменный на время ремонта.
           </p>
           <ul className="space-y-2 text-xs text-slate-700">
             <li className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-              <span>Прямые поставки от дистрибьюторов Yamaha, Shure, JBL, Sennheiser</span>
+              <span>Официальные поставки: Yamaha, Fender, Roland, Shure, JBL, Korg, Cort</span>
             </li>
             <li className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-              <span>Собственная база монтажников и сертифицированных инженеров</span>
+              <span>Отстройка инструмента перед выдачей — бесплатно</span>
             </li>
             <li className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-              <span>Собственный сервисный центр по ремонту звукового оборудования в Гродно</span>
+              <span>Своя мастерская в Гродно: ремонт инструментов и звукового оборудования</span>
             </li>
           </ul>
         </div>
