@@ -1,13 +1,16 @@
 import React from 'react';
 import { useApp } from '../../context/AppContext';
 import { MOCK_SERVICES } from '../../data/mockData';
-import { Compass, Wrench, ShieldCheck, Calendar, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Compass, Wrench, ShieldCheck, Calendar, ArrowRight, CheckCircle2, Guitar, Sparkles, Repeat } from 'lucide-react';
 
 const SERVICE_ICONS: Record<string, React.ReactNode> = {
   Compass: <Compass className="w-6 h-6" />,
   Wrench: <Wrench className="w-6 h-6" />,
   ShieldCheck: <ShieldCheck className="w-6 h-6" />,
-  Calendar: <Calendar className="w-6 h-6" />
+  Calendar: <Calendar className="w-6 h-6" />,
+  Guitar: <Guitar className="w-6 h-6" />,
+  Sparkles: <Sparkles className="w-6 h-6" />,
+  Repeat: <Repeat className="w-6 h-6" />
 };
 
 export const ServicesSection: React.FC = () => {
