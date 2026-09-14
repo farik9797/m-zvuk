@@ -2,7 +2,7 @@ import React, { useState, useRef, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
 import { PageRoute } from '../../types';
 import {
-  Phone, Mail, MapPin, Search, ShoppingCart, Heart, ArrowLeftRight, Menu, X, ChevronDown, Database, Volume2, Speaker, Mic, Sliders, Radio, Headphones, Cable, ArrowRight, Guitar, Piano, Drum
+  Phone, Mail, MapPin, Search, ShoppingCart, Heart, ArrowLeftRight, Menu, X, ChevronDown, Database, ArrowRight
 } from 'lucide-react';
 import { MOCK_CATEGORIES, getCategoryProductCount } from '../../data/mockData';
 import logoUrl from '../../assets/logo.png';
@@ -110,32 +110,6 @@ export const Header: React.FC = () => {
     setIsMobileMenuOpen(false);
   };
 
-  const getCategoryIcon = (iconName: string) => {
-    switch (iconName) {
-      case 'Speaker':
-        return <Speaker className="w-4 h-4 text-orange-500" />;
-      case 'Mic':
-        return <Mic className="w-4 h-4 text-orange-500" />;
-      case 'Sliders':
-        return <Sliders className="w-4 h-4 text-orange-500" />;
-      case 'Radio':
-        return <Radio className="w-4 h-4 text-orange-500" />;
-      case 'Headphones':
-        return <Headphones className="w-4 h-4 text-orange-500" />;
-      case 'Volume2':
-        return <Volume2 className="w-4 h-4 text-orange-500" />;
-      case 'Cable':
-        return <Cable className="w-4 h-4 text-orange-500" />;
-      case 'Guitar':
-        return <Guitar className="w-4 h-4 text-orange-500" />;
-      case 'Piano':
-        return <Piano className="w-4 h-4 text-orange-500" />;
-      case 'Drum':
-        return <Drum className="w-4 h-4 text-orange-500" />;
-      default:
-        return <Volume2 className="w-4 h-4 text-orange-500" />;
-    }
-  };
 
   return (
     <header className="sticky top-0 z-40 bg-white shadow-md border-b border-slate-200">
@@ -355,12 +329,9 @@ export const Header: React.FC = () => {
               >
                 <div className="bg-white border border-slate-200 rounded-3xl shadow-2xl p-4 divide-y divide-slate-100">
                   <div className="pb-3 px-2 flex items-center justify-between">
-                    <div className="flex items-center gap-2">
-                      <Sliders className="w-4 h-4 text-orange-600" />
-                      <span className="text-xs font-black uppercase tracking-wider text-slate-900">
-                        Категории оборудования
-                      </span>
-                    </div>
+                    <span className="text-xs font-black uppercase tracking-wider text-slate-900">
+                      Категории оборудования
+                    </span>
                     <span className="text-[12px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
                       {products.length} товаров в наличии
                     </span>
@@ -371,12 +342,9 @@ export const Header: React.FC = () => {
                       <button
                         key={cat.id}
                         onClick={() => handleCategoryClick(cat.id)}
-                        className="group flex items-start gap-3 p-2.5 rounded-2xl hover:bg-orange-50/80 transition-all text-left border border-transparent hover:border-orange-200/80"
+                        className="group block p-2.5 rounded-2xl hover:bg-orange-50/80 transition-all text-left border border-transparent hover:border-orange-200/80"
                       >
-                        <div className="p-2 rounded-xl bg-slate-100 group-hover:bg-white group-hover:shadow-xs transition-colors shrink-0 mt-0.5">
-                          {getCategoryIcon(cat.iconName)}
-                        </div>
-                        <div className="min-w-0 flex-1">
+                        <div className="min-w-0">
                           <div className="flex items-center justify-between gap-1">
                             <h4 className="text-xs font-bold text-slate-800 group-hover:text-orange-600 truncate transition-colors">
                               {cat.name}
