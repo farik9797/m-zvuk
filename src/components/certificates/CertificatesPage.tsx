@@ -49,7 +49,7 @@ export const CertificatesPage: React.FC = () => {
               </div>
 
               <div>
-                <span className="text-[10px] font-bold text-orange-600 uppercase tracking-wider block">
+                <span className="text-[12px] font-bold text-orange-600 uppercase tracking-wider block">
                   {cert.category}
                 </span>
                 <h3 className="text-sm font-bold text-slate-900 line-clamp-2 mt-0.5">{cert.title}</h3>
@@ -58,7 +58,7 @@ export const CertificatesPage: React.FC = () => {
             </div>
 
             <div className="pt-3 border-t border-slate-100 flex items-center justify-between text-xs">
-              <span className="text-[11px] text-slate-400">Действителен до: {cert.validUntil}</span>
+              <span className="text-[12px] text-slate-500">Действителен до: {cert.validUntil}</span>
               <button
                 onClick={() => handleDownloadPdf(cert.title)}
                 className="px-3 py-1.5 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-lg text-xs flex items-center gap-1.5 shadow transition-colors"
@@ -93,7 +93,7 @@ export const CertificatesPage: React.FC = () => {
           <div className="relative w-full max-w-2xl bg-white rounded-2xl overflow-hidden p-6 border border-slate-200">
             <button
               onClick={() => setActiveCert(null)}
-              className="absolute top-4 right-4 p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-600"
+              className="absolute top-4 right-4 p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-400"
             >
               <X className="w-5 h-5" />
             </button>

@@ -49,14 +49,14 @@ export const QuickViewModal: React.FC<QuickViewModalProps> = ({ product, onClose
                 <RatingStars rating={product.rating} reviewsCount={product.reviewsCount} />
               </div>
 
-              <p className="text-xs text-slate-600 mt-3 leading-relaxed">
+              <p className="text-xs text-slate-400 mt-3 leading-relaxed">
                 {product.shortDesc}
               </p>
 
               <div className="mt-4 pt-3 border-t border-slate-100 space-y-1">
                 {product.specs.slice(0, 3).map((spec, i) => (
                   <div key={i} className="flex justify-between text-xs">
-                    <span className="text-slate-500">{spec.name}:</span>
+                    <span className="text-slate-400">{spec.name}:</span>
                     <span className="font-semibold text-slate-800">{spec.value}</span>
                   </div>
                 ))}

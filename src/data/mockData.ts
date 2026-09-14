@@ -451,8 +451,8 @@ export const MOCK_PRODUCTS: Product[] = [
     reviewsCount: 12,
     inStock: true,
     stockCount: 40,
-    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80',
-    additionalImages: ['https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80'],
+    image: paSpeakerImg,
+    additionalImages: [paSpeakerImg],
     shortDesc: 'Фоновое озвучивание и речевое оповещение в офисах, магазинах и коридорах учебных заведений.',
     fullDesc: 'Потолочные громкоговорители 100 В подключаются десятками к одному трансляционному усилителю — это и есть главное преимущество трансляционных линий. Переключаемая мощность позволяет выровнять громкость по зонам: у входа тише, в глубине зала громче.',
     specs: [
@@ -478,8 +478,8 @@ export const MOCK_PRODUCTS: Product[] = [
     reviewsCount: 9,
     inStock: true,
     stockCount: 35,
-    image: 'https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80',
-    additionalImages: ['https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&q=80'],
+    image: paSpeakerImg,
+    additionalImages: [paSpeakerImg],
     shortDesc: 'Настенный вариант для помещений без подвесного потолка: склады, лестничные клетки, производственные цеха.',
     fullDesc: 'Настенные трансляционные громкоговорители ставят там, где врезать потолочные некуда. Корпус из ABS-пластика с креплением под углом позволяет направить звук в нужную зону, а переключатель мощности — согласовать нагрузку на линии.',
     specs: [
@@ -532,8 +532,8 @@ export const MOCK_PRODUCTS: Product[] = [
     reviewsCount: 7,
     inStock: true,
     stockCount: 4,
-    image: micStandImg,
-    additionalImages: [micStandImg],
+    image: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80',
+    additionalImages: ['https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80'],
     shortDesc: 'Для усилителей, процессоров и коммутации: съёмные боковые панели, вентиляция, замок.',
     fullDesc: 'Шкаф на 12 юнитов закрывает потребности небольшой инсталляции: трансляционный усилитель, источник фоновой музыки, процессор и патч-панель. Съёмные боковины упрощают монтаж кабельных трасс, замок защищает от посторонних рук в общедоступных помещениях.',
     specs: [

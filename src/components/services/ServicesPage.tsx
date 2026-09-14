@@ -62,7 +62,7 @@ export const ServicesPage: React.FC = () => {
 
             <div className="pt-6 border-t border-slate-100 flex items-center justify-between">
               <div>
-                <span className="text-[10px] text-slate-400 block uppercase font-bold">Стоимость</span>
+                <span className="text-[12px] text-slate-500 block uppercase font-bold">Стоимость</span>
                 <span className="text-lg font-black text-slate-900">от {formatPrice(service.priceStartBYN)}</span>
               </div>
 

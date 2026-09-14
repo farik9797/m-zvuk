@@ -157,7 +157,7 @@ export const Header: React.FC = () => {
               <MapPin className="w-3.5 h-3.5" />
               г. Гродно, ул. 17 Сентября, 49-11 • Пн-Сб
             </span>
-            <span className="hidden lg:inline-block px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 text-[11px] font-bold border border-orange-500/20">
+            <span className="hidden lg:inline-block px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 text-[12px] font-bold border border-orange-500/20">
               Работаем с НДС 20% для Юридических Лиц
             </span>
           </div>
@@ -165,7 +165,7 @@ export const Header: React.FC = () => {
           <div className="flex items-center gap-3">
             <button
               onClick={() => setIsDataSyncOpen(true)}
-              className="flex items-center gap-1.5 px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-emerald-400 font-medium rounded-lg transition-colors border border-slate-700 text-[11px]"
+              className="flex items-center gap-1.5 px-2.5 py-1 bg-slate-800 hover:bg-slate-700 text-emerald-400 font-medium rounded-lg transition-colors border border-slate-700 text-[12px]"
               title="1C Синхронизация и экспорт номенклатуры"
             >
               <Database className="w-3.5 h-3.5 text-emerald-400" />
@@ -174,7 +174,7 @@ export const Header: React.FC = () => {
 
             <button
               onClick={toggleCurrency}
-              className="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded text-[11px] transition-colors border border-slate-700"
+              className="px-2 py-0.5 bg-slate-800 hover:bg-slate-700 text-slate-200 font-bold rounded text-[12px] transition-colors border border-slate-700"
             >
               Валюта: <span className="text-orange-400">{currency}</span>
             </button>
@@ -215,11 +215,11 @@ export const Header: React.FC = () => {
               placeholder="Поиск по каталогу (например: Yamaha, Shure, микрофон)..."
               className="w-full pl-10 pr-4 py-2.5 bg-slate-100 focus:bg-white border border-slate-200 focus:border-orange-500 rounded-xl text-sm outline-none transition-all"
             />
-            <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-3.5" />
+            <Search className="w-4 h-4 text-slate-500 absolute left-3.5 top-3.5" />
             {searchQuery && (
               <button
                 onClick={() => setSearchQuery('')}
-                className="absolute right-3 top-3 text-xs text-slate-400 hover:text-slate-600"
+                className="absolute right-3 top-3 text-xs text-slate-500 hover:text-slate-600"
               >
                 Очистить
               </button>
@@ -251,9 +251,9 @@ export const Header: React.FC = () => {
                         {formatPrice(prod.priceBYN)}
                       </span>
                       {prod.inStock ? (
-                        <span className="text-[10px] text-emerald-600 font-bold">В наличии</span>
+                        <span className="text-[12px] text-emerald-600 font-bold">В наличии</span>
                       ) : (
-                        <span className="text-[10px] text-slate-400">Под заказ</span>
+                        <span className="text-[12px] text-slate-500">Под заказ</span>
                       )}
                     </div>
                   </div>
@@ -273,7 +273,7 @@ export const Header: React.FC = () => {
           >
             <Heart className="w-5 h-5" />
             {wishlist.length > 0 && (
-              <span className="absolute -top-1 -right-1 w-5 h-5 bg-orange-600 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 w-5 h-5 bg-orange-600 text-white text-[12px] font-bold rounded-full flex items-center justify-center">
                 {wishlist.length}
               </span>
             )}
@@ -287,7 +287,7 @@ export const Header: React.FC = () => {
           >
             <ArrowLeftRight className="w-5 h-5" />
             {compareList.length > 0 && (
-              <span className="absolute -top-1 -right-1 w-5 h-5 bg-slate-800 text-white text-[10px] font-bold rounded-full flex items-center justify-center">
+              <span className="absolute -top-1 -right-1 w-5 h-5 bg-slate-800 text-white text-[12px] font-bold rounded-full flex items-center justify-center">
                 {compareList.length}
               </span>
             )}
@@ -301,13 +301,13 @@ export const Header: React.FC = () => {
             <div className="relative">
               <ShoppingCart className="w-5 h-5 text-orange-600 group-hover:scale-110 transition-transform" />
               {cartTotalCount > 0 && (
-                <span className="absolute -top-2 -right-2.5 w-5 h-5 bg-orange-600 text-white text-[10px] font-bold rounded-full flex items-center justify-center shadow">
+                <span className="absolute -top-2 -right-2.5 w-5 h-5 bg-orange-600 text-white text-[12px] font-bold rounded-full flex items-center justify-center shadow">
                   {cartTotalCount}
                 </span>
               )}
             </div>
             <div className="text-left hidden sm:block">
-              <span className="text-[10px] uppercase font-bold text-slate-500 block leading-none">Корзина</span>
+              <span className="text-[12px] uppercase font-bold text-slate-500 block leading-none">Корзина</span>
               <span className="text-xs font-extrabold text-slate-900 block mt-0.5">
                 {cartTotalBYN > 0 ? formatPrice(cartTotalBYN) : 'Пусто'}
               </span>
@@ -346,7 +346,7 @@ export const Header: React.FC = () => {
               }`}
             >
               <span>Каталог</span>
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isCatalogDropdownOpen ? 'rotate-180 text-orange-600' : 'text-slate-400'}`} />
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isCatalogDropdownOpen ? 'rotate-180 text-orange-600' : 'text-slate-500'}`} />
             </button>
 
             {isCatalogDropdownOpen && (
@@ -363,7 +363,7 @@ export const Header: React.FC = () => {
                         Категории оборудования
                       </span>
                     </div>
-                    <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
+                    <span className="text-[12px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
                       {products.length} товаров в наличии
                     </span>
                   </div>
@@ -383,11 +383,11 @@ export const Header: React.FC = () => {
                             <h4 className="text-xs font-bold text-slate-800 group-hover:text-orange-600 truncate transition-colors">
                               {cat.name}
                             </h4>
-                            <span className="text-[10px] font-bold text-slate-400 group-hover:text-orange-500 bg-slate-50 group-hover:bg-orange-100/70 px-1.5 py-0.5 rounded-full shrink-0">
+                            <span className="text-[12px] font-bold text-slate-500 group-hover:text-orange-500 bg-slate-50 group-hover:bg-orange-100/70 px-1.5 py-0.5 rounded-full shrink-0">
                               {getCategoryProductCount(cat.id)}
                             </span>
                           </div>
-                          <p className="text-[11px] text-slate-500 line-clamp-1 mt-0.5 font-normal leading-tight">
+                          <p className="text-[12px] text-slate-500 line-clamp-1 mt-0.5 font-normal leading-tight">
                             {cat.description}
                           </p>
                         </div>
@@ -396,7 +396,7 @@ export const Header: React.FC = () => {
                   </div>
 
                   <div className="pt-3 px-1 flex items-center justify-between">
-                    <span className="text-[11px] text-slate-400 font-normal">
+                    <span className="text-[12px] text-slate-500 font-normal">
                       Официальный дистрибьютор в Беларуси (с НДС 20%)
                     </span>
                     <button
@@ -444,7 +444,7 @@ export const Header: React.FC = () => {
               }`}
             >
               <span>О компании</span>
-              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isAboutDropdownOpen ? 'rotate-180 text-orange-600' : 'text-slate-400'}`} />
+              <ChevronDown className={`w-3.5 h-3.5 transition-transform duration-200 ${isAboutDropdownOpen ? 'rotate-180 text-orange-600' : 'text-slate-500'}`} />
             </button>
 
             {isAboutDropdownOpen && (
@@ -465,7 +465,7 @@ export const Header: React.FC = () => {
                       }`}
                     >
                       <span>О нас и история</span>
-                      <span className="text-[10px] text-slate-400 font-normal">mzvuk.by</span>
+                      <span className="text-[12px] text-slate-500 font-normal">mzvuk.by</span>
                     </button>
                     <button
                       onClick={() => {
@@ -504,7 +504,7 @@ export const Header: React.FC = () => {
                       }`}
                     >
                       <span>Новости и статьи</span>
-                      <span className="text-[10px] bg-orange-100 text-orange-700 font-bold px-1.5 py-0.5 rounded">NEW</span>
+                      <span className="text-[12px] bg-orange-100 text-orange-700 font-bold px-1.5 py-0.5 rounded">NEW</span>
                     </button>
                     <button
                       onClick={() => {
@@ -516,7 +516,7 @@ export const Header: React.FC = () => {
                       }`}
                     >
                       <span>Вопрос-ответ (FAQ)</span>
-                      <span className="text-[10px] text-slate-400 font-normal">Помощь</span>
+                      <span className="text-[12px] text-slate-500 font-normal">Помощь</span>
                     </button>
                   </div>
                 </div>
@@ -607,7 +607,7 @@ export const Header: React.FC = () => {
 
             {/* О компании с подпунктами в мобильном меню */}
             <div className="bg-slate-800/60 rounded-xl p-2 my-1 border border-slate-700/50 space-y-1">
-              <span className="text-[11px] font-bold text-orange-400 uppercase tracking-wider px-2 block py-1">
+              <span className="text-[12px] font-bold text-orange-400 uppercase tracking-wider px-2 block py-1">
                 О компании
               </span>
               {[

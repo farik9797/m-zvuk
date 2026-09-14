@@ -36,17 +36,17 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
       <div className="p-3 pb-0 flex items-start justify-between z-10">
         <div className="flex flex-col gap-1 items-start">
           {product.badge === 'DISCOUNT' && product.discountPercent && (
-            <span className="px-2 py-0.5 rounded-md bg-rose-600 text-white text-[10px] font-extrabold uppercase tracking-wide shadow-sm">
+            <span className="px-2 py-0.5 rounded-md bg-rose-600 text-white text-[12px] font-extrabold uppercase tracking-wide shadow-sm">
               -{product.discountPercent}%
             </span>
           )}
           {product.badge === 'HIT' && (
-            <span className="px-2 py-0.5 rounded-md bg-amber-500 text-white text-[10px] font-extrabold uppercase tracking-wide shadow-sm">
+            <span className="px-2 py-0.5 rounded-md bg-amber-500 text-white text-[12px] font-extrabold uppercase tracking-wide shadow-sm">
               ХИТ
             </span>
           )}
           {product.badge === 'NEW' && (
-            <span className="px-2 py-0.5 rounded-md bg-emerald-600 text-white text-[10px] font-extrabold uppercase tracking-wide shadow-sm">
+            <span className="px-2 py-0.5 rounded-md bg-emerald-600 text-white text-[12px] font-extrabold uppercase tracking-wide shadow-sm">
               NEW
             </span>
           )}
@@ -59,7 +59,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
               toggleWishlist(product.id);
             }}
             className={`p-1.5 rounded-lg transition-colors ${
-              isWishlisted ? 'text-rose-600 bg-rose-50' : 'text-slate-400 hover:text-slate-700'
+              isWishlisted ? 'text-rose-600 bg-rose-50' : 'text-slate-500 hover:text-slate-700'
             }`}
             title="Добавить в избранное"
           >
@@ -71,7 +71,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
               toggleCompare(product.id);
             }}
             className={`p-1.5 rounded-lg transition-colors ${
-              isCompared ? 'text-orange-600 bg-orange-50' : 'text-slate-400 hover:text-slate-700'
+              isCompared ? 'text-orange-600 bg-orange-50' : 'text-slate-500 hover:text-slate-700'
             }`}
             title="Сравнить"
           >
@@ -108,7 +108,7 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
       {/* Product Information */}
       <div className="p-4 pt-2 space-y-2 flex-1 flex flex-col justify-between">
         <div>
-          <div className="flex items-center justify-between text-[11px] text-slate-500">
+          <div className="flex items-center justify-between text-[12px] text-slate-500">
             <span className="font-bold text-orange-600">{product.brand}</span>
             <span>Арт: {product.sku}</span>
           </div>
@@ -123,14 +123,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
 
         <div className="space-y-2">
           {/* Stock & Rating */}
-          <div className="flex items-center justify-between pt-1 text-[11px]">
+          <div className="flex items-center justify-between pt-1 text-[12px]">
             <RatingStars rating={product.rating} reviewsCount={product.reviewsCount} />
             {product.inStock ? (
               <span className="text-emerald-600 font-bold flex items-center gap-1">
                 <CheckCircle2 className="w-3 h-3" /> В наличии
               </span>
             ) : (
-              <span className="text-slate-400 font-medium flex items-center gap-1">
+              <span className="text-slate-500 font-medium flex items-center gap-1">
                 <Clock className="w-3 h-3" /> Под заказ
               </span>
             )}
@@ -144,12 +144,12 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onQuickView }
                   {formatPrice(product.priceBYN)}
                 </span>
                 {product.oldPriceBYN && (
-                  <span className="text-xs text-slate-400 line-through">
+                  <span className="text-xs text-slate-500 line-through">
                     {formatPrice(product.oldPriceBYN)}
                   </span>
                 )}
               </div>
-              <span className="text-[10px] text-slate-400 block">с НДС 20% для ЮР лиц</span>
+              <span className="text-[12px] text-slate-500 block">с НДС 20% для ЮР лиц</span>
             </div>
           </div>
 

@@ -43,7 +43,7 @@ export const FAQPage: React.FC = () => {
             placeholder="Поиск по вопросам (например: НДС, гарантия, доставка)..."
             className="w-full pl-10 pr-4 py-3 bg-white border border-slate-200 focus:border-orange-500 rounded-2xl text-xs outline-none shadow-sm"
           />
-          <Search className="w-4 h-4 text-slate-400 absolute left-3.5 top-5" />
+          <Search className="w-4 h-4 text-slate-500 absolute left-3.5 top-5" />
         </div>
       </div>
 
@@ -65,7 +65,7 @@ export const FAQPage: React.FC = () => {
                   <span>{faq.question}</span>
                 </div>
                 <ChevronDown
-                  className={`w-5 h-5 text-slate-400 shrink-0 transition-transform ${
+                  className={`w-5 h-5 text-slate-500 shrink-0 transition-transform ${
                     isOpen ? 'rotate-180 text-orange-600' : ''
                   }`}
                 />

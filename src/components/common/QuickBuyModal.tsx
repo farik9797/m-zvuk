@@ -99,7 +99,7 @@ export const QuickBuyModal: React.FC = () => {
                   Имя
                 </label>
                 <div className="relative">
-                  <User className="w-4 h-4 text-slate-400 absolute left-3 top-3.5" />
+                  <User className="w-4 h-4 text-slate-500 absolute left-3 top-3.5" />
                   <input
                     type="text"
                     value={name}
@@ -115,7 +115,7 @@ export const QuickBuyModal: React.FC = () => {
                   Телефон *
                 </label>
                 <div className="relative">
-                  <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3.5" />
+                  <Phone className="w-4 h-4 text-slate-500 absolute left-3 top-3.5" />
                   <input
                     type="tel"
                     required

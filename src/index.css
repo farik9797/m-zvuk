@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Unbounded:wght@500;600;700&display=swap');
 @import "tailwindcss";
 
 /* Фирменная палитра М-ЗВУК.
@@ -20,4 +21,50 @@
   --color-amber-400: #EF6A6A;
   --color-amber-500: #D93A3A;
   --color-amber-600: #B01D1D;
+
+  /* Типографика: Unbounded на заголовках (та же пара, что в утверждённой концепции
+     «Прилавок»), Manrope в тексте. Обе гарнитуры с кириллицей. */
+  --font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+  --font-display: 'Unbounded', 'Manrope', sans-serif;
+
+  /* Базовый масштаб был мелковат для магазина: основной текст шёл 12px,
+     подписи 10–11px. Поднимаем всю шкалу на пару пунктов — правка в одном месте
+     вместо 350+ классов в компонентах. */
+  --text-xs: 0.8125rem;    /* 13px вместо 12 */
+  --text-sm: 0.9375rem;    /* 15px вместо 14 */
+  --text-base: 1.0625rem;  /* 17px вместо 16 */
+}
+
+@layer base {
+  body {
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* Tailwind 4 убрал cursor:pointer у кнопок — возвращаем, иначе интерфейс
+     не ощущается кликабельным (пункт чек-листа). */
+  button:not(:disabled),
+  [role='button']:not([aria-disabled='true']),
+  summary {
+    cursor: pointer;
+  }
+
+  /* Уважение к системной настройке «уменьшить движение»:
+     в интерфейсе 460+ анимированных элементов. */
+  @media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+      scroll-behavior: auto !important;
+    }
+  }
+
+  /* Крупные заголовки — фирменной гарнитурой */
+  h1, h2 {
+    font-family: var(--font-display);
+    letter-spacing: -0.02em;
+  }
 }

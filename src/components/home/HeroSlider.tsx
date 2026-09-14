@@ -60,7 +60,7 @@ export const HeroSlider: React.FC = () => {
   const slide = SLIDES[currentSlide];
 
   return (
-    <section className="relative h-[400px] bg-slate-100/90 text-slate-900 overflow-hidden rounded-3xl my-6 mx-4 max-w-7xl lg:mx-auto shadow-lg border border-slate-200/80">
+    <section className="relative h-auto md:h-[400px] bg-slate-100/90 text-slate-900 overflow-hidden rounded-3xl my-6 mx-4 max-w-7xl lg:mx-auto shadow-lg border border-slate-200/80">
       <div className="h-full flex flex-col md:flex-row items-stretch">
         {/* Left Content Column */}
         <div className="relative z-10 w-full md:w-7/12 lg:w-3/5 p-6 sm:p-8 md:p-10 flex flex-col justify-between bg-gradient-to-r from-white via-white/95 to-white/80">
@@ -122,7 +122,7 @@ export const HeroSlider: React.FC = () => {
               >
                 <ChevronLeft className="w-4 h-4" />
               </button>
-              <span className="text-[11px] font-black text-slate-700 px-1">
+              <span className="text-[12px] font-black text-slate-700 px-1">
                 0{currentSlide + 1} / 0{SLIDES.length}
               </span>
               <button
@@ -137,7 +137,7 @@ export const HeroSlider: React.FC = () => {
         </div>
 
         {/* Right Image Column - 100% Bright, Crisp & Clear */}
-        <div className="relative w-full md:w-5/12 lg:w-2/5 h-48 md:h-full overflow-hidden bg-slate-900">
+        <div className="relative w-full md:w-5/12 lg:w-2/5 h-56 sm:h-64 md:h-full overflow-hidden bg-slate-900">
           <img
             key={slide.id}
             src={slide.bgImage}
@@ -148,7 +148,7 @@ export const HeroSlider: React.FC = () => {
           <div className="absolute inset-0 bg-gradient-to-t md:bg-gradient-to-r from-black/30 via-transparent to-transparent pointer-events-none"></div>
 
           {/* Floating badge over image */}
-          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/60 shadow-lg text-[11px] font-black text-slate-900 flex items-center gap-1.5">
+          <div className="absolute top-4 right-4 bg-white/90 backdrop-blur-md px-3 py-1.5 rounded-xl border border-white/60 shadow-lg text-[12px] font-black text-slate-900 flex items-center gap-1.5">
             <Volume2 className="w-3.5 h-3.5 text-orange-600" />
             <span>mzvuk.by</span>
           </div>

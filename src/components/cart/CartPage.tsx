@@ -59,13 +59,13 @@ export const CartPage: React.FC = () => {
                 />
 
                 <div className="min-w-0">
-                  <span className="text-[10px] font-bold text-orange-600 uppercase tracking-wider block">
+                  <span className="text-[12px] font-bold text-orange-600 uppercase tracking-wider block">
                     {item.product.brand}
                   </span>
                   <h3 className="text-sm font-bold text-slate-900 truncate">
                     {item.product.name}
                   </h3>
-                  <span className="text-xs text-slate-400 block mt-0.5">
+                  <span className="text-xs text-slate-500 block mt-0.5">
                     Артикул: {item.product.sku}
                   </span>
                   <span className="text-xs font-bold text-emerald-600 mt-1 block">
@@ -94,7 +94,7 @@ export const CartPage: React.FC = () => {
                 </div>
 
                 <div className="text-right">
-                  <span className="text-xs text-slate-400 block">Сумма:</span>
+                  <span className="text-xs text-slate-500 block">Сумма:</span>
                   <span className="text-base font-black text-slate-900">
                     {formatPrice(item.product.priceBYN * item.quantity)}
                   </span>
@@ -102,7 +102,7 @@ export const CartPage: React.FC = () => {
 
                 <button
                   onClick={() => removeFromCart(item.product.id)}
-                  className="p-2 text-slate-400 hover:text-rose-600"
+                  className="p-2 text-slate-500 hover:text-rose-600"
                   title="Удалить товар"
                 >
                   <Trash2 className="w-5 h-5" />
@@ -162,7 +162,7 @@ export const CartPage: React.FC = () => {
               <FileText className="w-4 h-4 text-orange-600" />
               <span>Для юридических лиц и ИП:</span>
             </div>
-            <p className="text-[11px] text-slate-500 leading-relaxed">
+            <p className="text-[12px] text-slate-500 leading-relaxed">
               На этапе оформления вы сможете ввести УНП компании для автоматической генерации счета-фактуры.
             </p>
           </div>

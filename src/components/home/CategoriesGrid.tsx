@@ -53,7 +53,7 @@ export const CategoriesGrid: React.FC = () => {
               <div className="p-3 rounded-xl bg-orange-50 text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-colors">
                 {ICON_MAP[cat.iconName] || <Volume2 className="w-6 h-6" />}
               </div>
-              <span className="text-[11px] font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full group-hover:bg-orange-100 group-hover:text-orange-700 transition-colors">
+              <span className="text-[12px] font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full group-hover:bg-orange-100 group-hover:text-orange-700 transition-colors">
                 {getCategoryProductCount(cat.id)} тов.
               </span>
             </div>
@@ -62,7 +62,7 @@ export const CategoriesGrid: React.FC = () => {
               <h3 className="text-sm font-bold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-1">
                 {cat.name}
               </h3>
-              <p className="text-[11px] text-slate-500 mt-1 line-clamp-2">
+              <p className="text-[12px] text-slate-500 mt-1 line-clamp-2">
                 {cat.description}
               </p>
             </div>

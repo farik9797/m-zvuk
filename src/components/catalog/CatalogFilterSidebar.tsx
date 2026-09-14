@@ -42,7 +42,7 @@ export const CatalogFilterSidebar: React.FC = () => {
         </div>
         <button
           onClick={resetFilters}
-          className="text-[11px] font-bold text-slate-400 hover:text-orange-600 flex items-center gap-1 transition-colors"
+          className="text-[12px] font-bold text-slate-500 hover:text-orange-600 flex items-center gap-1 transition-colors"
           title="Сбросить все фильтры"
         >
           <RotateCcw className="w-3 h-3" /> Сбросить
@@ -62,7 +62,7 @@ export const CatalogFilterSidebar: React.FC = () => {
             }`}
           >
             <span>Все категории</span>
-            <span className="text-[10px] opacity-80">{MOCK_PRODUCTS.length}</span>
+            <span className="text-[12px] opacity-80">{MOCK_PRODUCTS.length}</span>
           </button>
           {MOCK_CATEGORIES.map(cat => (
             <button
@@ -75,7 +75,7 @@ export const CatalogFilterSidebar: React.FC = () => {
               }`}
             >
               <span className="truncate">{cat.name}</span>
-              <span className="text-[10px] opacity-70 ml-2">{getCategoryProductCount(cat.id)}</span>
+              <span className="text-[12px] opacity-70 ml-2">{getCategoryProductCount(cat.id)}</span>
             </button>
           ))}
         </div>
@@ -99,7 +99,7 @@ export const CatalogFilterSidebar: React.FC = () => {
             className="w-full px-2.5 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-xs outline-none focus:border-orange-500 font-bold"
             placeholder="От"
           />
-          <span className="text-slate-400 font-bold">—</span>
+          <span className="text-slate-500 font-bold">—</span>
           <input
             type="number"
             value={filters.priceRange[1]}

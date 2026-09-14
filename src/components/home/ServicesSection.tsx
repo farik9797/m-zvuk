@@ -66,7 +66,7 @@ export const ServicesSection: React.FC = () => {
 
               <div className="pt-4 border-t border-slate-700/60 flex items-center justify-between">
                 <div>
-                  <span className="text-[10px] text-slate-400 block uppercase">Стоимость от</span>
+                  <span className="text-[12px] text-slate-500 block uppercase">Стоимость от</span>
                   <span className="text-sm font-extrabold text-orange-400">{formatPrice(srv.priceStartBYN)}</span>
                 </div>
                 <button

@@ -72,12 +72,12 @@ export const HomePage: React.FC = () => {
                   alt={MOCK_NEWS[0].title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-3 left-3 px-2.5 py-1 bg-slate-900/90 text-white text-[10px] font-bold rounded-lg backdrop-blur">
+                <span className="absolute top-3 left-3 px-2.5 py-1 bg-slate-900/90 text-white text-[12px] font-bold rounded-lg backdrop-blur">
                   {MOCK_NEWS[0].category}
                 </span>
               </div>
               <div className="p-5">
-                <span className="text-[11px] font-bold text-slate-400 block mb-1">{MOCK_NEWS[0].date}</span>
+                <span className="text-[12px] font-bold text-slate-500 block mb-1">{MOCK_NEWS[0].date}</span>
                 <h3 className="text-sm font-bold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-2">
                   {MOCK_NEWS[0].title}
                 </h3>
@@ -103,12 +103,12 @@ export const HomePage: React.FC = () => {
                   alt={MOCK_ARTICLES[0].title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-3 left-3 px-2.5 py-1 bg-orange-600 text-white text-[10px] font-bold rounded-lg shadow">
+                <span className="absolute top-3 left-3 px-2.5 py-1 bg-orange-600 text-white text-[12px] font-bold rounded-lg shadow">
                   Руководство
                 </span>
               </div>
               <div className="p-5">
-                <span className="text-[11px] font-bold text-slate-400 block mb-1">{MOCK_ARTICLES[0].date}</span>
+                <span className="text-[12px] font-bold text-slate-500 block mb-1">{MOCK_ARTICLES[0].date}</span>
                 <h3 className="text-sm font-bold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-2">
                   {MOCK_ARTICLES[0].title}
                 </h3>
@@ -134,12 +134,12 @@ export const HomePage: React.FC = () => {
                   alt={MOCK_ARTICLES[1].title}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <span className="absolute top-3 left-3 px-2.5 py-1 bg-blue-600 text-white text-[10px] font-bold rounded-lg shadow">
+                <span className="absolute top-3 left-3 px-2.5 py-1 bg-blue-600 text-white text-[12px] font-bold rounded-lg shadow">
                   Обзор
                 </span>
               </div>
               <div className="p-5">
-                <span className="text-[11px] font-bold text-slate-400 block mb-1">{MOCK_ARTICLES[1].date}</span>
+                <span className="text-[12px] font-bold text-slate-500 block mb-1">{MOCK_ARTICLES[1].date}</span>
                 <h3 className="text-sm font-bold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-2">
                   {MOCK_ARTICLES[1].title}
                 </h3>

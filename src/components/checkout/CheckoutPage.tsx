@@ -108,7 +108,7 @@ export const CheckoutPage: React.FC = () => {
               <span className="text-xs font-bold text-orange-600 block">
                 Счёт-фактура № {placedOrderSuccess.orderId}
               </span>
-              <span className="text-[11px] text-slate-400 block">
+              <span className="text-[12px] text-slate-500 block">
                 Дата счета: {placedOrderSuccess.date}
               </span>
             </div>
@@ -146,7 +146,7 @@ export const CheckoutPage: React.FC = () => {
             <tbody className="divide-y divide-slate-100">
               {placedOrderSuccess.items.map((item, idx) => (
                 <tr key={idx}>
-                  <td className="p-3 text-slate-400 font-mono">{idx + 1}</td>
+                  <td className="p-3 text-slate-500 font-mono">{idx + 1}</td>
                   <td className="p-3 font-bold text-slate-900">{item.product.name}</td>
                   <td className="p-3 text-center">{item.quantity}</td>
                   <td className="p-3 text-right">{formatPrice(item.product.priceBYN)}</td>
@@ -207,7 +207,7 @@ export const CheckoutPage: React.FC = () => {
                 <Building2 className="w-5 h-5 shrink-0" />
                 <div className="text-left">
                   <span className="text-xs font-extrabold block">Юридическое лицо / ИП</span>
-                  <span className="text-[10px] opacity-80 block">Безналичный расчет с НДС 20%</span>
+                  <span className="text-[12px] opacity-80 block">Безналичный расчет с НДС 20%</span>
                 </div>
               </button>
 
@@ -223,7 +223,7 @@ export const CheckoutPage: React.FC = () => {
                 <User className="w-5 h-5 shrink-0" />
                 <div className="text-left">
                   <span className="text-xs font-extrabold block">Частное лицо</span>
-                  <span className="text-[10px] opacity-80 block">ЕРИП / Карта / Наличные</span>
+                  <span className="text-[12px] opacity-80 block">ЕРИП / Карта / Наличные</span>
                 </div>
               </button>
             </div>
@@ -286,7 +286,7 @@ export const CheckoutPage: React.FC = () => {
                 <h2 className="text-sm font-bold text-slate-900 uppercase tracking-wider">
                   3. Реквизиты организации для Счёта
                 </h2>
-                <span className="text-[10px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">
+                <span className="text-[12px] font-bold text-emerald-600 bg-emerald-50 px-2.5 py-1 rounded-full">
                   Авто-генерация ТТН и ЭСЧФ
                 </span>
               </div>
@@ -329,7 +329,7 @@ export const CheckoutPage: React.FC = () => {
                     type="text"
                     value={bankAccount}
                     onChange={e => setBankAccount(e.target.value)}
-                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-orange-500 font-mono text-[11px]"
+                    className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-orange-500 font-mono text-[12px]"
                   />
                 </div>
 
@@ -406,7 +406,7 @@ export const CheckoutPage: React.FC = () => {
                   <span className="font-bold text-slate-900 block truncate max-w-[180px]">
                     {item.product.name}
                   </span>
-                  <span className="text-[10px] text-slate-400">
+                  <span className="text-[12px] text-slate-500">
                     {item.quantity} x {formatPrice(item.product.priceBYN)}
                   </span>
                 </div>
@@ -422,7 +422,7 @@ export const CheckoutPage: React.FC = () => {
               <span>Сумма с НДС 20%:</span>
               <span className="text-lg font-black text-orange-600">{formatPrice(cartTotalBYN)}</span>
             </div>
-            <p className="text-[10px] text-slate-400">
+            <p className="text-[12px] text-slate-500">
               * Доставка по Беларуси бесплатна при заказе от 500 BYN
             </p>
           </div>

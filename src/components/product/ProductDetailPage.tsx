@@ -75,7 +75,7 @@ export const ProductDetailPage: React.FC = () => {
   return (
     <div className="max-w-7xl mx-auto px-4 py-8 animate-fade-in space-y-8">
       {/* Breadcrumb Navigation */}
-      <nav className="text-xs text-slate-400 flex items-center gap-2">
+      <nav className="text-xs text-slate-500 flex items-center gap-2">
         <button onClick={() => setRoute('home')} className="hover:text-slate-600">Главная</button>
         <ChevronRight className="w-3.5 h-3.5" />
         <button onClick={() => setRoute('catalog')} className="hover:text-slate-600">Каталог</button>
@@ -149,7 +149,7 @@ export const ProductDetailPage: React.FC = () => {
                   <CheckCircle2 className="w-4 h-4" /> В наличии на складе ({selectedProduct.stockCount} шт.)
                 </span>
               ) : (
-                <span className="text-xs font-medium text-slate-400 flex items-center gap-1">
+                <span className="text-xs font-medium text-slate-500 flex items-center gap-1">
                   <Clock className="w-4 h-4" /> Под заказ (1-3 дня)
                 </span>
               )}
@@ -182,13 +182,13 @@ export const ProductDetailPage: React.FC = () => {
           <div className="pt-6 border-t border-slate-100 space-y-4">
             <div className="flex items-baseline justify-between">
               <div>
-                <span className="text-xs text-slate-400 block uppercase font-bold">Цена с НДС 20%:</span>
+                <span className="text-xs text-slate-500 block uppercase font-bold">Цена с НДС 20%:</span>
                 <div className="flex items-baseline gap-3">
                   <span className="text-3xl font-black text-slate-900">
                     {formatPrice(selectedProduct.priceBYN * qty)}
                   </span>
                   {selectedProduct.oldPriceBYN && (
-                    <span className="text-sm text-slate-400 line-through">
+                    <span className="text-sm text-slate-500 line-through">
                       {formatPrice(selectedProduct.oldPriceBYN * qty)}
                     </span>
                   )}
@@ -321,7 +321,7 @@ export const ProductDetailPage: React.FC = () => {
                   <div key={rev.id} className="p-4 bg-slate-50 rounded-2xl border border-slate-200 space-y-2">
                     <div className="flex items-center justify-between">
                       <div className="font-bold text-xs text-slate-900">{rev.author}</div>
-                      <span className="text-[10px] text-slate-400">{rev.date}</span>
+                      <span className="text-[12px] text-slate-500">{rev.date}</span>
                     </div>
                     <RatingStars rating={rev.rating} />
                     <p className="text-xs text-slate-700 leading-relaxed">{rev.text}</p>

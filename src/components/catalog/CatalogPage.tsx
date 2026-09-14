@@ -74,7 +74,7 @@ export const CatalogPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 py-8 animate-fade-in">
       {/* Breadcrumb & Header Title */}
       <div className="mb-6">
-        <div className="text-xs text-slate-400 mb-2">
+        <div className="text-xs text-slate-500 mb-2">
           <span>Главная</span> <span className="mx-1.5">•</span>{' '}
           <span className="text-slate-700 font-bold">Каталог товаров</span>
         </div>
@@ -131,7 +131,7 @@ export const CatalogPage: React.FC = () => {
           <div className="bg-white rounded-2xl p-4 border border-slate-200 flex flex-wrap items-center justify-between gap-4">
             {/* Sorting Dropdown */}
             <div className="flex items-center gap-2 text-xs">
-              <ArrowUpDown className="w-4 h-4 text-slate-400 shrink-0" />
+              <ArrowUpDown className="w-4 h-4 text-slate-500 shrink-0" />
               <span className="font-bold text-slate-700 hidden sm:inline">Сортировка:</span>
               <select
                 value={filters.sortBy}

@@ -114,7 +114,7 @@ ${items}
               <h2 className="text-lg font-black text-slate-900">
                 Синхронизация и Панель B2B Заказов
               </h2>
-              <p className="text-xs text-slate-500">
+              <p className="text-xs text-slate-400">
                 Интеграция с 1С:УТ, Экспорт прайс-листов и история выставленных счетов
               </p>
             </div>
@@ -135,7 +135,7 @@ ${items}
             className={`flex items-center gap-2 pb-2 border-b-2 transition-colors ${
               activeTab === 'sync'
                 ? 'border-orange-600 text-orange-600'
-                : 'border-transparent text-slate-500'
+                : 'border-transparent text-slate-400'
             }`}
           >
             <RefreshCw className="w-4 h-4" /> 1С Интеграция & Имспорт/Экспорт
@@ -146,7 +146,7 @@ ${items}
             className={`flex items-center gap-2 pb-2 border-b-2 transition-colors ${
               activeTab === 'orders'
                 ? 'border-orange-600 text-orange-600'
-                : 'border-transparent text-slate-500'
+                : 'border-transparent text-slate-400'
             }`}
           >
             <FileText className="w-4 h-4" /> Реестр выписанных счетов ({placedOrders.length})
@@ -162,7 +162,7 @@ ${items}
                   <FileSpreadsheet className="w-5 h-5 text-emerald-600" />
                   <span>Экспорт каталога</span>
                 </div>
-                <p className="text-xs text-slate-600">
+                <p className="text-xs text-slate-400">
                   Выгрузить текущий каталог ({products.length} товаров) с ценами в BYN, остатками и гарантией.
                   CSV открывается в Excel, XML — в структуре, близкой к CommerceML.
                 </p>
@@ -233,7 +233,7 @@ ${items}
         {activeTab === 'orders' && (
           <div className="py-6 space-y-4 overflow-y-auto flex-1">
             {placedOrders.length === 0 ? (
-              <div className="text-center py-12 text-slate-400 text-xs">
+              <div className="text-center py-12 text-slate-500 text-xs">
                 Реестр выписанных счетов пока пуст. Оформите заказ на сайте.
               </div>
             ) : (
@@ -246,7 +246,7 @@ ${items}
                     <span className="font-bold text-slate-900 text-sm">
                       Счёт № {ord.orderId} ({ord.customerType.toUpperCase()})
                     </span>
-                    <span className="text-slate-400">{ord.date}</span>
+                    <span className="text-slate-500">{ord.date}</span>
                   </div>
                   <div className="text-slate-600">
                     Клиент: <strong className="text-slate-800">{ord.companyName || ord.fullName}</strong>{' '}

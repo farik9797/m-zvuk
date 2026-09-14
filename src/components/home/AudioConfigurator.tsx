@@ -58,7 +58,7 @@ export const AudioConfigurator: React.FC = () => {
             <h2 className="text-2xl md:text-3xl font-black text-white">
               Подобрать готовый комплект звука под ваш объект
             </h2>
-            <p className="text-xs md:text-sm text-slate-400 mt-1">
+            <p className="text-xs md:text-sm text-slate-500 mt-1">
               Выберите тип помещения для мгновенного расчета базового состава оборудования и стоимости.
             </p>
           </div>
@@ -85,7 +85,7 @@ export const AudioConfigurator: React.FC = () => {
             >
               <div className="mb-2">{venue.icon}</div>
               <h3 className="text-sm font-bold line-clamp-1">{venue.name}</h3>
-              <p className="text-[11px] opacity-80 mt-0.5">{venue.areaRange}</p>
+              <p className="text-[12px] opacity-80 mt-0.5">{venue.areaRange}</p>
             </button>
           ))}
         </div>
@@ -117,7 +117,7 @@ export const AudioConfigurator: React.FC = () => {
             <span className="text-2xl font-black text-orange-400 block">
               {formatPrice(selectedVenue.estimateBYN)}
             </span>
-            <span className="text-[10px] text-slate-400 block">с НДС 20% • Гарантия 24 мес</span>
+            <span className="text-[12px] text-slate-400 block">с НДС 20% • Гарантия 24 мес</span>
 
             <button
               onClick={() => setIsCallbackOpen(true)}

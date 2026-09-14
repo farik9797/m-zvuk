@@ -41,7 +41,7 @@ export const ContactsPage: React.FC = () => {
                 <Phone className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-[10px] font-bold text-slate-400 uppercase">Телефоны отдела продаж</span>
+                <span className="text-[12px] font-bold text-slate-500 uppercase">Телефоны отдела продаж</span>
                 <a href="tel:+375333772873" className="text-sm font-black text-slate-900 hover:text-orange-600 block">
                   +375 (33) 377-28-73
                 </a>
@@ -55,7 +55,7 @@ export const ContactsPage: React.FC = () => {
                 <Mail className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-[10px] font-bold text-slate-400 uppercase">Электронная почта</span>
+                <span className="text-[12px] font-bold text-slate-500 uppercase">Электронная почта</span>
                 <a href="mailto:sales@mzvuk.by" className="text-sm font-black text-slate-900 hover:text-orange-600 block">
                   sales@mzvuk.by
                 </a>
@@ -69,11 +69,11 @@ export const ContactsPage: React.FC = () => {
                 <Clock className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-[10px] font-bold text-slate-400 uppercase">Режим работы</span>
+                <span className="text-[12px] font-bold text-slate-500 uppercase">Режим работы</span>
                 <span className="text-xs font-bold text-slate-900 block">
                   Пн-Пт: 10:00 - 19:00, Сб: 10:00 - 16:00
                 </span>
-                <span className="text-[11px] text-slate-500 block">
+                <span className="text-[12px] text-slate-500 block">
                   Вс: выходной, заявки с сайта принимаем круглосуточно
                 </span>
               </div>
@@ -86,7 +86,7 @@ export const ContactsPage: React.FC = () => {
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-[10px] font-bold text-slate-400 uppercase">Магазин и склад в Гродно</span>
+                <span className="text-[12px] font-bold text-slate-500 uppercase">Магазин и склад в Гродно</span>
                 <span className="text-xs font-bold text-slate-900 block">
                   {COMPANY.address.full}
                 </span>

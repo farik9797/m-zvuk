@@ -31,7 +31,7 @@ export const CartDrawer: React.FC = () => {
             <div className="flex items-center gap-2">
               <ShoppingBag className="w-5 h-5 text-orange-600" />
               <h2 className="text-lg font-black text-slate-900">Корзина заказа</h2>
-              <span className="text-xs font-bold text-slate-500 bg-slate-100 px-2 py-0.5 rounded-full">
+              <span className="text-xs font-bold text-slate-400 bg-slate-100 px-2 py-0.5 rounded-full">
                 {cart.reduce((s, i) => s + i.quantity, 0)}
               </span>
             </div>
@@ -52,7 +52,7 @@ export const CartDrawer: React.FC = () => {
                   <ShoppingBag className="w-8 h-8" />
                 </div>
                 <h3 className="text-base font-bold text-slate-800">Ваша корзина пуста</h3>
-                <p className="text-xs text-slate-500 max-w-xs mx-auto">
+                <p className="text-xs text-slate-400 max-w-xs mx-auto">
                   Выберите нужное профессиональное звуковое оборудование из нашего каталога.
                 </p>
                 <button
@@ -67,11 +67,11 @@ export const CartDrawer: React.FC = () => {
               </div>
             ) : (
               <>
-                <div className="flex justify-between items-center text-xs text-slate-500 pb-2 border-b border-slate-100">
+                <div className="flex justify-between items-center text-xs text-slate-400 pb-2 border-b border-slate-100">
                   <span>Выбранные позиции с НДС 20%</span>
                   <button
                     onClick={clearCart}
-                    className="text-rose-600 hover:underline text-[11px] font-bold"
+                    className="text-rose-600 hover:underline text-[12px] font-bold"
                   >
                     Очистить корзину
                   </button>
@@ -92,7 +92,7 @@ export const CartDrawer: React.FC = () => {
                       <h4 className="text-xs font-bold text-slate-900 truncate">
                         {item.product.name}
                       </h4>
-                      <span className="text-[10px] text-slate-400 block">
+                      <span className="text-[12px] text-slate-400 block">
                         Артикул: {item.product.sku}
                       </span>
                       <span className="text-xs font-black text-orange-600 block mt-1">
@@ -112,7 +112,7 @@ export const CartDrawer: React.FC = () => {
                       <div className="flex items-center border border-slate-300 rounded-lg bg-white">
                         <button
                           onClick={() => updateQuantity(item.product.id, item.quantity - 1)}
-                          className="w-6 h-6 font-bold text-xs text-slate-600 flex items-center justify-center hover:bg-slate-100"
+                          className="w-6 h-6 font-bold text-xs text-slate-400 flex items-center justify-center hover:bg-slate-100"
                         >
                           -
                         </button>
@@ -121,7 +121,7 @@ export const CartDrawer: React.FC = () => {
                         </span>
                         <button
                           onClick={() => updateQuantity(item.product.id, item.quantity + 1)}
-                          className="w-6 h-6 font-bold text-xs text-slate-600 flex items-center justify-center hover:bg-slate-100"
+                          className="w-6 h-6 font-bold text-xs text-slate-400 flex items-center justify-center hover:bg-slate-100"
                         >
                           +
                         </button>
@@ -136,7 +136,7 @@ export const CartDrawer: React.FC = () => {
           {/* Footer & Checkout Action */}
           {cart.length > 0 && (
             <div className="p-6 border-t border-slate-200 bg-slate-50 space-y-4">
-              <div className="space-y-1.5 text-xs text-slate-600">
+              <div className="space-y-1.5 text-xs text-slate-400">
                 <div className="flex justify-between">
                   <span>НДС (20% включен):</span>
                   <span className="font-bold text-slate-800">
@@ -172,7 +172,7 @@ export const CartDrawer: React.FC = () => {
                 </button>
               </div>
 
-              <div className="flex items-center justify-center gap-2 text-[10px] text-slate-400 font-semibold">
+              <div className="flex items-center justify-center gap-2 text-[12px] text-slate-400 font-semibold">
                 <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
                 <span>Безналичный расчет для ЮР лиц с закрывающими ТТН</span>
               </div>

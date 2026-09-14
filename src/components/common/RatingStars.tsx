@@ -21,7 +21,7 @@ export const RatingStars: React.FC<RatingStarsProps> = ({ rating, reviewsCount }
       </div>
       <span className="text-xs font-bold text-slate-700 ml-1">{rating.toFixed(1)}</span>
       {reviewsCount !== undefined && (
-        <span className="text-[11px] text-slate-400">({reviewsCount})</span>
+        <span className="text-[12px] text-slate-500">({reviewsCount})</span>
       )}
     </div>
   );

@@ -61,12 +61,12 @@ export const NewsArticlesPage: React.FC = () => {
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                   />
-                  <span className="absolute top-3 left-3 px-2.5 py-1 bg-slate-900/90 text-white text-[10px] font-bold rounded-lg backdrop-blur">
+                  <span className="absolute top-3 left-3 px-2.5 py-1 bg-slate-900/90 text-white text-[12px] font-bold rounded-lg backdrop-blur">
                     {item.category}
                   </span>
                 </div>
                 <div className="p-5">
-                  <span className="text-[11px] font-bold text-slate-400 block mb-1">{item.date}</span>
+                  <span className="text-[12px] font-bold text-slate-500 block mb-1">{item.date}</span>
                   <h3 className="text-base font-bold text-slate-900 group-hover:text-orange-600 transition-colors line-clamp-2">
                     {item.title}
                   </h3>
@@ -103,7 +103,7 @@ export const NewsArticlesPage: React.FC = () => {
               </div>
               <div className="p-5 md:w-3/5 flex flex-col justify-between space-y-3">
                 <div>
-                  <div className="flex items-center gap-2 text-[10px] font-bold text-slate-400 mb-1">
+                  <div className="flex items-center gap-2 text-[12px] font-bold text-slate-500 mb-1">
                     <User className="w-3 h-3 text-orange-500" />
                     <span>{art.author}</span>
                   </div>
@@ -115,7 +115,7 @@ export const NewsArticlesPage: React.FC = () => {
                   </p>
                 </div>
 
-                <div className="flex items-center justify-between text-[11px] text-slate-400 pt-2 border-t border-slate-100">
+                <div className="flex items-center justify-between text-[12px] text-slate-500 pt-2 border-t border-slate-100">
                   <span>{art.date}</span>
                   <span className="text-orange-600 font-bold flex items-center gap-1">
                     Читать <ArrowRight className="w-3 h-3" />
@@ -133,7 +133,7 @@ export const NewsArticlesPage: React.FC = () => {
           <div className="relative w-full max-w-2xl bg-white rounded-3xl p-6 md:p-8 overflow-hidden max-h-[90vh] overflow-y-auto border border-slate-200 space-y-4">
             <button
               onClick={() => setSelectedNews(null)}
-              className="absolute top-4 right-4 p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-600"
+              className="absolute top-4 right-4 p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-400"
             >
               <X className="w-5 h-5" />
             </button>
@@ -151,7 +151,7 @@ export const NewsArticlesPage: React.FC = () => {
           <div className="relative w-full max-w-2xl bg-white rounded-3xl p-6 md:p-8 overflow-hidden max-h-[90vh] overflow-y-auto border border-slate-200 space-y-4">
             <button
               onClick={() => setSelectedArticle(null)}
-              className="absolute top-4 right-4 p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-600"
+              className="absolute top-4 right-4 p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-400"
             >
               <X className="w-5 h-5" />
             </button>

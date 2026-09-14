@@ -28,7 +28,7 @@ export const NotificationToast: React.FC = () => {
           </div>
           <button
             onClick={() => removeNotification(n.id)}
-            className="p-1 text-slate-400 hover:text-white rounded-lg transition-colors ml-3"
+            className="p-1 text-slate-500 hover:text-white rounded-lg transition-colors ml-3"
             aria-label="Закрыть"
           >
             <X className="w-4 h-4" />

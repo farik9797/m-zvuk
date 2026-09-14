@@ -14,7 +14,7 @@ export const SocialLinks: React.FC<{ variant?: 'dark' | 'light'; className?: str
   const base =
     variant === 'dark'
       ? 'bg-slate-900 border-slate-800 text-slate-300 hover:bg-orange-600 hover:border-orange-600 hover:text-white'
-      : 'bg-white border-slate-200 text-slate-600 hover:border-orange-500 hover:text-orange-600';
+      : 'bg-white border-slate-200 text-slate-400 hover:border-orange-500 hover:text-orange-600';
 
   return (
     <div className={`flex items-center gap-2 ${className}`}>

@@ -57,7 +57,7 @@ export const ComparePage: React.FC = () => {
           <table className="w-full min-w-[600px] text-xs text-left border-collapse">
             <thead>
               <tr className="border-b border-slate-200">
-                <th className="p-4 w-48 text-slate-400 font-bold uppercase text-[10px]">
+                <th className="p-4 w-48 text-slate-500 font-bold uppercase text-[12px]">
                   Параметр / Товар
                 </th>
                 {comparedProducts.map(product => (
@@ -65,7 +65,7 @@ export const ComparePage: React.FC = () => {
                     <div className="space-y-3 relative">
                       <button
                         onClick={() => toggleCompare(product.id)}
-                        className="absolute top-0 right-0 p-1 text-slate-400 hover:text-rose-600"
+                        className="absolute top-0 right-0 p-1 text-slate-500 hover:text-rose-600"
                         title="Удалить из сравнения"
                       >
                         <X className="w-4 h-4" />
@@ -80,7 +80,7 @@ export const ComparePage: React.FC = () => {
                       </div>
 
                       <div>
-                        <span className="text-[10px] font-bold text-orange-600 uppercase">
+                        <span className="text-[12px] font-bold text-orange-600 uppercase">
                           {product.brand}
                         </span>
                         <h3 className="text-xs font-bold text-slate-900 line-clamp-2 mt-0.5">
@@ -93,7 +93,7 @@ export const ComparePage: React.FC = () => {
 
                       <button
                         onClick={() => addToCart(product)}
-                        className="w-full py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-xl text-[11px] flex items-center justify-center gap-1.5 shadow"
+                        className="w-full py-2 bg-orange-600 hover:bg-orange-700 text-white font-bold rounded-xl text-[12px] flex items-center justify-center gap-1.5 shadow"
                       >
                         <ShoppingCart className="w-3.5 h-3.5" /> В корзину
                       </button>
@@ -113,7 +113,7 @@ export const ComparePage: React.FC = () => {
                         <Check className="w-4 h-4" /> В наличии ({p.stockCount} шт.)
                       </span>
                     ) : (
-                      <span className="text-slate-400">Под заказ</span>
+                      <span className="text-slate-500">Под заказ</span>
                     )}
                   </td>
                 ))}

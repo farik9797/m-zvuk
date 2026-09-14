@@ -34,7 +34,7 @@ export const BrandCarousel: React.FC = () => {
             <div className="text-xl font-black tracking-widest text-slate-800 group-hover:text-orange-600 transition-colors font-mono uppercase">
               {brand.logo}
             </div>
-            <span className="text-[10px] font-bold text-slate-400 mt-1 flex items-center gap-1">
+            <span className="text-[12px] font-bold text-slate-500 mt-1 flex items-center gap-1">
               <Globe className="w-2.5 h-2.5" /> {brand.country}
             </span>
           </div>

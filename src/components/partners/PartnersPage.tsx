@@ -31,7 +31,7 @@ export const PartnersPage: React.FC = () => {
                 <span className="text-2xl font-black font-mono tracking-widest text-slate-900">
                   {brand.logo}
                 </span>
-                <span className="text-[10px] font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full flex items-center gap-1">
+                <span className="text-[12px] font-bold text-slate-500 bg-slate-100 px-2.5 py-1 rounded-full flex items-center gap-1">
                   <Globe className="w-3 h-3 text-orange-500" /> {brand.country}
                 </span>
               </div>
@@ -40,7 +40,7 @@ export const PartnersPage: React.FC = () => {
                 {brand.description}
               </p>
 
-              <div className="text-[11px] font-bold text-orange-600 bg-orange-50 p-2.5 rounded-xl">
+              <div className="text-[12px] font-bold text-orange-600 bg-orange-50 p-2.5 rounded-xl">
                 Основная специализация: {brand.featuredCategory}
               </div>
             </div>
@@ -60,7 +60,7 @@ export const PartnersPage: React.FC = () => {
                 href={brand.website}
                 target="_blank"
                 rel="noreferrer"
-                className="text-slate-400 hover:text-slate-700"
+                className="text-slate-500 hover:text-slate-700"
                 title="Официальный сайт"
               >
                 <ExternalLink className="w-4 h-4" />

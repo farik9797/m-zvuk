@@ -65,7 +65,7 @@ export const CallbackModal: React.FC = () => {
                   Ваше имя
                 </label>
                 <div className="relative">
-                  <User className="w-4 h-4 text-slate-400 absolute left-3 top-3.5" />
+                  <User className="w-4 h-4 text-slate-500 absolute left-3 top-3.5" />
                   <input
                     type="text"
                     value={name}
@@ -81,7 +81,7 @@ export const CallbackModal: React.FC = () => {
                   Телефон *
                 </label>
                 <div className="relative">
-                  <Phone className="w-4 h-4 text-slate-400 absolute left-3 top-3.5" />
+                  <Phone className="w-4 h-4 text-slate-500 absolute left-3 top-3.5" />
                   <input
                     type="tel"
                     required
@@ -98,7 +98,7 @@ export const CallbackModal: React.FC = () => {
                   Организация / Компания (для ЮР лиц)
                 </label>
                 <div className="relative">
-                  <Building className="w-4 h-4 text-slate-400 absolute left-3 top-3.5" />
+                  <Building className="w-4 h-4 text-slate-500 absolute left-3 top-3.5" />
                   <input
                     type="text"
                     value={company}
@@ -119,7 +119,7 @@ export const CallbackModal: React.FC = () => {
                 </button>
               </div>
 
-              <p className="text-[11px] text-slate-500 text-center mt-3">
+              <p className="text-[12px] text-slate-500 text-center mt-3">
                 Нажимая кнопку, вы соглашаетесь с обработкой персональных данных. Пн-Пт: 10:00 - 19:00
               </p>
             </form>
