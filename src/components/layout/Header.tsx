@@ -267,7 +267,7 @@ export const Header: React.FC = () => {
         <div className="flex items-center gap-2">
           {/* Wishlist */}
           <button
-            onClick={() => setRoute('catalog')}
+            onClick={() => setRoute('wishlist')}
             className="relative p-2.5 text-slate-700 hover:text-orange-600 hover:bg-orange-50 rounded-xl transition-colors"
             title="Избранное"
           >
@@ -281,8 +281,8 @@ export const Header: React.FC = () => {
 
           {/* Comparison */}
           <button
-            onClick={() => setRoute('catalog')}
-            className="relative p-2.5 text-slate-700 hover:text-orange-600 hover:bg-orange-50 rounded-xl transition-colors hidden sm:block"
+            onClick={() => setRoute('compare')}
+            className="relative p-2.5 text-slate-700 hover:text-orange-600 hover:bg-orange-50 rounded-xl transition-colors"
             title="Сравнение"
           >
             <ArrowLeftRight className="w-5 h-5" />
@@ -591,6 +591,36 @@ export const Header: React.FC = () => {
               }`}
             >
               Каталог
+            </button>
+
+            <button
+              onClick={() => {
+                setRoute('wishlist');
+                setIsMobileMenuOpen(false);
+              }}
+              className={`text-left px-3 py-2.5 rounded-lg transition-colors flex items-center justify-between ${
+                route === 'wishlist' ? 'bg-orange-600 text-white font-bold' : 'hover:bg-slate-800 text-slate-300'
+              }`}
+            >
+              <span>Избранное</span>
+              {wishlist.length > 0 && (
+                <span className="px-2 py-0.5 rounded-full bg-orange-600 text-white text-[12px] font-bold">{wishlist.length}</span>
+              )}
+            </button>
+
+            <button
+              onClick={() => {
+                setRoute('compare');
+                setIsMobileMenuOpen(false);
+              }}
+              className={`text-left px-3 py-2.5 rounded-lg transition-colors flex items-center justify-between ${
+                route === 'compare' ? 'bg-orange-600 text-white font-bold' : 'hover:bg-slate-800 text-slate-300'
+              }`}
+            >
+              <span>Сравнение</span>
+              {compareList.length > 0 && (
+                <span className="px-2 py-0.5 rounded-full bg-slate-700 text-white text-[12px] font-bold">{compareList.length}</span>
+              )}
             </button>
 
             <button

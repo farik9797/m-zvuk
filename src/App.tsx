@@ -55,6 +55,10 @@ const AppContent: React.FC = () => {
         return <CartPage />;
       case 'checkout':
         return <CheckoutPage />;
+      case 'wishlist':
+        return <WishlistPage />;
+      case 'compare':
+        return <ComparePage />;
       default:
         return <HomePage />;
     }

@@ -12,7 +12,9 @@ export type PageRoute =
   | 'contacts'
   | 'cart'
   | 'checkout'
-  | 'delivery';
+  | 'delivery'
+  | 'wishlist'
+  | 'compare';
 
 export type ProductBadge = 'HIT' | 'NEW' | 'DISCOUNT';
 
