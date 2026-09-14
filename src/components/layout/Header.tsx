@@ -199,14 +199,6 @@ export const Header: React.FC = () => {
           className="flex items-center gap-3 cursor-pointer group shrink-0"
         >
           <img src={logoUrl} alt="М-ЗВУК" className="h-10 w-auto group-hover:scale-105 transition-transform" />
-          <div className="hidden sm:block">
-            <span className="text-sm font-extrabold tracking-tight text-slate-900 block leading-none">
-              ООО «Арт-Медиа Трейд»
-            </span>
-            <span className="text-[11px] font-semibold text-slate-500 tracking-wider uppercase block mt-1">
-              mzvuk.by • Инструменты и звуковое оборудование
-            </span>
-          </div>
         </div>
 
         {/* Search Bar with Autocomplete */}
