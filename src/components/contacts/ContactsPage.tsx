@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { useApp } from '../../context/AppContext';
-import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Building2, ExternalLink } from 'lucide-react';
+import { COMPANY } from '../../data/company';
+import { SocialLinks } from '../common/SocialLinks';
+import { Phone, Mail, MapPin, Clock, Send, CheckCircle2, Building2, ExternalLink, ArrowRight } from 'lucide-react';
 
 export const ContactsPage: React.FC = () => {
   const { showNotification } = useApp();
@@ -69,10 +71,10 @@ export const ContactsPage: React.FC = () => {
               <div>
                 <span className="text-[10px] font-bold text-slate-400 uppercase">Режим работы</span>
                 <span className="text-xs font-bold text-slate-900 block">
-                  Пн-Пт: 09:00 - 18:00 (Офис/Склад)
+                  Пн-Пт: 10:00 - 19:00, Сб: 10:00 - 16:00
                 </span>
                 <span className="text-[11px] text-slate-500 block">
-                  Сб-Вс: Прием интернет-заявок
+                  Вс: выходной, заявки с сайта принимаем круглосуточно
                 </span>
               </div>
             </div>
@@ -86,15 +88,41 @@ export const ContactsPage: React.FC = () => {
               <div>
                 <span className="text-[10px] font-bold text-slate-400 uppercase">Магазин и склад в Гродно</span>
                 <span className="text-xs font-bold text-slate-900 block">
-                  230023, г. Гродно, ул. 17 Сентября, 49-11
+                  {COMPANY.address.full}
                 </span>
               </div>
             </div>
+            <SocialLinks variant="light" />
           </div>
         </div>
 
         {/* Map & Form Block */}
         <div className="lg:col-span-2 space-y-6">
+          {/* Yandex Map */}
+          <div className="bg-white rounded-3xl border border-slate-200 shadow-sm overflow-hidden">
+            <div className="flex items-center justify-between gap-4 px-6 py-4 border-b border-slate-100">
+              <div>
+                <h2 className="text-base font-black text-slate-900">Как нас найти</h2>
+                <p className="text-xs text-slate-500 mt-0.5">{COMPANY.address.full}</p>
+              </div>
+              <a
+                href={`https://yandex.by/maps/?text=${encodeURIComponent('Гродно, улица 17 Сентября, 49')}`}
+                target="_blank"
+                rel="noreferrer"
+                className="shrink-0 text-xs font-bold text-orange-600 hover:text-orange-700 flex items-center gap-1.5"
+              >
+                Открыть в Яндекс.Картах <ArrowRight className="w-3.5 h-3.5" />
+              </a>
+            </div>
+            <iframe
+              src={COMPANY.mapEmbedUrl}
+              title="Схема проезда к магазину М-ЗВУК в Гродно"
+              className="w-full h-[360px] border-0"
+              loading="lazy"
+              allowFullScreen
+            />
+          </div>
+
           {/* Form */}
           <div className="bg-slate-900 text-white rounded-3xl p-8 border border-slate-800 space-y-6">
             <div>

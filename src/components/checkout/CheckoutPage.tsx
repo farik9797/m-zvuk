@@ -316,7 +316,7 @@ export const CheckoutPage: React.FC = () => {
                     maxLength={9}
                     value={unp}
                     onChange={e => setUnp(e.target.value)}
-                    placeholder="193123456"
+                    placeholder="590123456"
                     className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-orange-500 font-mono font-bold"
                   />
                 </div>
@@ -374,7 +374,7 @@ export const CheckoutPage: React.FC = () => {
                   required
                   value={address}
                   onChange={e => setAddress(e.target.value)}
-                  placeholder="ул. Немига, д. 5"
+                  placeholder="ул. Ожешко, д. 12"
                   className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-orange-500 font-semibold"
                 />
               </div>

@@ -18,6 +18,59 @@ export const DataSyncModal: React.FC = () => {
 
   if (!isDataSyncOpen) return null;
 
+  /** Скачивание файла, собранного на клиенте. */
+  const downloadFile = (content: string, filename: string, mime: string) => {
+    const blob = new Blob([content], { type: `${mime};charset=utf-8` });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = filename;
+    document.body.appendChild(a);
+    a.click();
+    a.remove();
+    URL.revokeObjectURL(url);
+  };
+
+  const stamp = () => new Date().toISOString().slice(0, 10);
+
+  /** CSV для Excel: разделитель «;» и BOM, иначе кириллица открывается кракозябрами. */
+  const handleExportCsv = () => {
+    const head = ['Код 1С', 'Артикул', 'Наименование', 'Бренд', 'Категория', 'Цена BYN', 'Старая цена', 'Наличие', 'Остаток', 'Гарантия, мес'];
+    const esc = (v: string | number) => `"${String(v ?? '').replace(/"/g, '""')}"`;
+    const rows = products.map(p => [
+      p.id, p.sku, p.name, p.brand, p.category,
+      p.priceBYN, p.oldPriceBYN ?? '', p.inStock ? 'в наличии' : 'под заказ', p.stockCount, p.warrantyMonths
+    ].map(esc).join(';'));
+    downloadFile('\uFEFF' + [head.map(esc).join(';'), ...rows].join('\r\n'),
+      `mzvuk_catalog_${stamp()}.csv`, 'text/csv');
+    showNotification(`Выгружено в CSV: ${products.length} позиций`, 'success');
+  };
+
+  /** XML в структуре, близкой к CommerceML — чтобы было что скормить обмену с 1С. */
+  const handleExportXml = () => {
+    const esc = (v: string | number) => String(v ?? '')
+      .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+    const items = products.map(p => `    <Товар>
+      <Ид>${esc(p.id)}</Ид>
+      <Артикул>${esc(p.sku)}</Артикул>
+      <Наименование>${esc(p.name)}</Наименование>
+      <Изготовитель>${esc(p.brand)}</Изготовитель>
+      <Группа>${esc(p.category)}</Группа>
+      <Цена Валюта="BYN">${p.priceBYN}</Цена>
+      <Количество>${p.stockCount}</Количество>
+      <ГарантияМес>${p.warrantyMonths}</ГарантияМес>
+    </Товар>`).join('\n');
+    downloadFile(`<?xml version="1.0" encoding="UTF-8"?>
+<КоммерческаяИнформация ВерсияСхемы="2.10" ДатаФормирования="${stamp()}">
+  <Каталог>
+    <Ид>mzvuk-catalog</Ид>
+    <Наименование>Каталог mzvuk.by</Наименование>
+${items}
+  </Каталог>
+</КоммерческаяИнформация>`, `mzvuk_catalog_${stamp()}.xml`, 'application/xml');
+    showNotification(`Выгружено в XML: ${products.length} позиций`, 'success');
+  };
+
   const handleExportJson = () => {
     const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(products, null, 2));
     const downloadAnchor = document.createElement('a');
@@ -107,17 +160,32 @@ export const DataSyncModal: React.FC = () => {
               <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
                 <div className="flex items-center gap-2 font-bold text-slate-900 text-sm">
                   <FileSpreadsheet className="w-5 h-5 text-emerald-600" />
-                  <span>Экспорт в JSON / Excel</span>
+                  <span>Экспорт каталога</span>
                 </div>
                 <p className="text-xs text-slate-600">
-                  Скачать текущую базу данных ({products.length} товаров) со всеми ценами в BYN, характеристиками и остатками.
+                  Выгрузить текущий каталог ({products.length} товаров) с ценами в BYN, остатками и гарантией.
+                  CSV открывается в Excel, XML — в структуре, близкой к CommerceML.
                 </p>
-                <button
-                  onClick={handleExportJson}
-                  className="w-full py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-2"
-                >
-                  <Download className="w-4 h-4 text-orange-400" /> Скачать базу данных
-                </button>
+                <div className="grid grid-cols-3 gap-2">
+                  <button
+                    onClick={handleExportCsv}
+                    className="py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-1.5"
+                  >
+                    <Download className="w-3.5 h-3.5 text-orange-400" /> CSV
+                  </button>
+                  <button
+                    onClick={handleExportXml}
+                    className="py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-1.5"
+                  >
+                    <Download className="w-3.5 h-3.5 text-orange-400" /> XML
+                  </button>
+                  <button
+                    onClick={handleExportJson}
+                    className="py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-bold rounded-xl text-xs flex items-center justify-center gap-1.5"
+                  >
+                    <Download className="w-3.5 h-3.5 text-orange-400" /> JSON
+                  </button>
+                </div>
               </div>
 
               <div className="p-5 bg-slate-50 rounded-2xl border border-slate-200 space-y-3">
@@ -126,7 +194,8 @@ export const DataSyncModal: React.FC = () => {
                   <span>Синхронизация с 1С:Предприятие</span>
                 </div>
                 <p className="text-xs text-slate-600">
-                  Обновление остатков на складе в Гродно и цен с НДС через CommerceML 2.0 API.
+                  Обмен остатками и ценами с 1С:Управление торговлей 8.3 по CommerceML.
+                  Выполняется на стороне сервера — в макете кнопка показывает сценарий, а не делает запрос.
                 </p>
                 <button
                   onClick={handle1CSyncSimulation}

@@ -169,7 +169,7 @@ export const Header: React.FC = () => {
               title="1C Синхронизация и экспорт номенклатуры"
             >
               <Database className="w-3.5 h-3.5 text-emerald-400" />
-              1С / Экспорт XLS
+              1С / Экспорт каталога
             </button>
 
             <button

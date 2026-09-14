@@ -6,6 +6,7 @@ import {
   CreditCard, CheckCircle2, FileText, ArrowUp 
 } from 'lucide-react';
 import logoUrl from '../../assets/logo.png';
+import { SocialLinks } from '../common/SocialLinks';
 import { MOCK_CATEGORIES } from '../../data/mockData';
 
 export const Footer: React.FC = () => {
@@ -107,6 +108,7 @@ export const Footer: React.FC = () => {
                 <MapPin className="w-4 h-4 text-slate-400" />
                 г. Гродно, ул. 17 Сентября, 49-11
               </p>
+              <SocialLinks className="pt-2" />
               <p className="flex items-center gap-2 text-slate-400">
                 <Clock className="w-4 h-4 text-slate-400" />
                 Пн-Пт: 10:00 - 19:00, Сб: 10:00 - 16:00
@@ -204,10 +206,6 @@ export const Footer: React.FC = () => {
           </div>
 
           <div className="flex items-center gap-4 text-xs">
-            <span className="px-2 py-1 bg-slate-900 rounded border border-slate-800 text-slate-400 font-mono">ЕРИП</span>
-            <span className="px-2 py-1 bg-slate-900 rounded border border-slate-800 text-slate-400 font-mono">VISA / MC</span>
-            <span className="px-2 py-1 bg-slate-900 rounded border border-slate-800 text-slate-400 font-mono">Безнал (НДС)</span>
-            
             <button
               onClick={scrollToTop}
               className="p-2 bg-slate-900 hover:bg-orange-600 text-slate-300 hover:text-white rounded-xl border border-slate-800 transition-colors"
