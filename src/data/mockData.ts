@@ -1,6 +1,41 @@
+import guitarElectricImg from '../assets/products/guitar-electric.jpg';
+import guitarElectric2Img from '../assets/products/guitar-electric-2.jpg';
+import guitarAcousticImg from '../assets/products/guitar-acoustic.jpg';
+import guitarAmpImg from '../assets/products/guitar-amp.jpg';
+import synthImg from '../assets/products/synth.jpg';
+import pianoDigitalImg from '../assets/products/piano-digital.jpg';
+import drumsImg from '../assets/products/drums.jpg';
+
 import { Product, Category, ServiceItem, NewsItem, ArticleItem, CertificateItem, FAQItem, PartnerBrand } from '../types';
 
 export const MOCK_CATEGORIES: Category[] = [
+  {
+    id: 'guitars',
+    name: 'Гитары и басы',
+    slug: 'guitars',
+    iconName: 'Guitar',
+    description: 'Электрогитары, акустика, бас-гитары, укулеле и комбоусилители для дома, репетиций и сцены.',
+    productCount: 48,
+    image: guitarElectricImg
+  },
+  {
+    id: 'keys',
+    name: 'Клавишные и синтезаторы',
+    slug: 'keys',
+    iconName: 'Piano',
+    description: 'Цифровые пианино, синтезаторы, рабочие станции и MIDI-клавиатуры для сцены и студии.',
+    productCount: 26,
+    image: pianoDigitalImg
+  },
+  {
+    id: 'drums',
+    name: 'Ударные и перкуссия',
+    slug: 'drums',
+    iconName: 'Drum',
+    description: 'Акустические и электронные установки, тарелки, кахоны и перкуссия для школ и групп.',
+    productCount: 19,
+    image: drumsImg
+  },
   {
     id: 'studio-monitors',
     name: 'Студийные мониторы',
@@ -67,6 +102,282 @@ export const MOCK_CATEGORIES: Category[] = [
 ];
 
 export const MOCK_PRODUCTS: Product[] = [
+  {
+    id: 'prod-101',
+    sku: 'FEN-PL2-ST-BK',
+    name: 'Fender Player II Stratocaster MN — Электрогитара',
+    category: 'guitars',
+    brand: 'Fender',
+    priceBYN: 3190,
+    oldPriceBYN: 3590,
+    badge: 'DISCOUNT',
+    discountPercent: 11,
+    rating: 5.0,
+    reviewsCount: 28,
+    inStock: true,
+    stockCount: 3,
+    image: guitarElectricImg,
+    additionalImages: [guitarElectricImg],
+    shortDesc: 'Обновлённая мексиканская серия Player II: ольховый корпус, кленовый гриф профиля Modern «C», три сингла Alnico V.',
+    fullDesc: 'Player II Stratocaster — рабочая лошадка для дома и сцены. Корпус из ольхи даёт сбалансированный тон, кленовый гриф профиля Modern «C» с радиусом накладки 9,5" удобен и для аккордовой игры, и для соло. Три сингла Player II Alnico V сохраняют узнаваемый стратовый характер: прозрачный верх, плотная середина, чистый звук на чистом канале. Перед выдачей мастер проверяет строй, высоту струн и мензуру.',
+    specs: [
+      { name: 'Тип', value: 'электрогитара, Stratocaster' },
+      { name: 'Корпус', value: 'ольха' },
+      { name: 'Гриф / накладка', value: 'клён, профиль Modern «C» / клён, радиус 9,5"' },
+      { name: 'Звукосниматели', value: '3 × сингл Player II Alnico V' },
+      { name: 'Количество ладов', value: '22, medium jumbo' },
+      { name: 'Мензура', value: '648 мм (25,5")' },
+      { name: 'Бридж', value: '2-point tremolo со стальным блоком' },
+      { name: 'Вес', value: '3,6 кг' }
+    ],
+    tags: ['Fender', 'электрогитара', 'Stratocaster', 'сингл', 'для сцены'],
+    warrantyMonths: 24,
+    isPopular: true,
+    reviews: [
+      {
+        id: 'rev-101-1',
+        author: 'Алексей К.',
+        company: 'Гродно',
+        rating: 5,
+        date: '02.09.2026',
+        text: 'Заказал в пятницу вечером — в понедельник забрал. Перед выдачей отстроили гриф и выставили высоту струн, играть можно прямо из кофра.',
+        verified: true
+      },
+      {
+        id: 'rev-101-2',
+        author: 'Дмитрий П.',
+        rating: 5,
+        date: '17.08.2026',
+        text: 'Вторая гитара в коллекции, брал на замену бюджетной. Середина плотнее, верх чище. Консультант честно сравнил три модели и не навязывал дороже.',
+        verified: true
+      }
+    ]
+  },
+  {
+    id: 'prod-102',
+    sku: 'IBZ-GRG170DX-BKN',
+    name: 'Ibanez GRG170DX — Электрогитара',
+    category: 'guitars',
+    brand: 'Ibanez',
+    priceBYN: 1090,
+    rating: 4.6,
+    reviewsCount: 12,
+    inStock: true,
+    stockCount: 5,
+    image: guitarElectric2Img,
+    additionalImages: [guitarElectric2Img],
+    shortDesc: 'Тонкий быстрый гриф GRG, конфигурация HSH и тремоло — популярный старт для рока и метала.',
+    fullDesc: 'GRG170DX из серии GIO — частый выбор для первой электрогитары в тяжёлых стилях. Тонкий гриф GRG играется быстро, связка хамбакер-сингл-хамбакер закрывает и плотный рифф, и чистый арпеджио. Тремоло-система держит строй при умеренной работе рычагом.',
+    specs: [
+      { name: 'Тип', value: 'электрогитара, SuperStrat' },
+      { name: 'Корпус', value: 'тополь' },
+      { name: 'Гриф / накладка', value: 'клён, профиль GRG / пурпурное дерево' },
+      { name: 'Звукосниматели', value: 'Infinity R (H-S-H)' },
+      { name: 'Количество ладов', value: '24, medium' },
+      { name: 'Мензура', value: '648 мм (25,5")' },
+      { name: 'Бридж', value: 'FAT-6 tremolo' }
+    ],
+    tags: ['Ibanez', 'электрогитара', 'рок', 'метал', 'для начинающих'],
+    warrantyMonths: 24,
+    reviews: [
+      {
+        id: 'rev-102-1',
+        author: 'Егор С.',
+        rating: 5,
+        date: '21.08.2026',
+        text: 'Брал сыну в музыкальную школу для рок-ансамбля. Гриф реально тонкий, ребёнку удобно. За свои деньги отличный инструмент.',
+        verified: true
+      }
+    ]
+  },
+  {
+    id: 'prod-103',
+    sku: 'CORT-AD810-OP',
+    name: 'Cort AD810 OP — Акустическая гитара (дредноут)',
+    category: 'guitars',
+    brand: 'Cort',
+    priceBYN: 419,
+    oldPriceBYN: 529,
+    badge: 'DISCOUNT',
+    discountPercent: 21,
+    rating: 4.7,
+    reviewsCount: 41,
+    inStock: true,
+    stockCount: 8,
+    image: guitarAcousticImg,
+    additionalImages: [guitarAcousticImg],
+    shortDesc: 'Самая ходовая акустика для обучения: корпус дредноут, ель и махагони, открытая пора.',
+    fullDesc: 'AD810 — первая гитара для тысяч учеников музыкальных школ. Дредноут даёт громкий, яркий звук, которого хватает и для аккомпанемента голосу, и для игры в компании. Верхняя дека из ели, корпус из махагони, отделка Open Pore — лёгкая и честная. Перед выдачей инструмент отстраивается по высоте струн.',
+    specs: [
+      { name: 'Тип', value: 'акустическая гитара, дредноут' },
+      { name: 'Верхняя дека', value: 'ель' },
+      { name: 'Корпус', value: 'махагони' },
+      { name: 'Гриф / накладка', value: 'махагони / пурпурное дерево' },
+      { name: 'Количество ладов', value: '20' },
+      { name: 'Мензура', value: '643 мм' },
+      { name: 'Отделка', value: 'Open Pore, натуральный' }
+    ],
+    tags: ['Cort', 'акустическая гитара', 'дредноут', 'для обучения', 'музыкальная школа'],
+    warrantyMonths: 12,
+    isPopular: true,
+    reviews: [
+      {
+        id: 'rev-103-1',
+        author: 'Марина Т.',
+        company: 'преподаватель',
+        rating: 5,
+        date: '09.09.2026',
+        text: 'Берём такие в класс уже третий год. Строй держат, звук ровный, ученикам хватает на несколько лет занятий.',
+        verified: true
+      }
+    ]
+  },
+  {
+    id: 'prod-104',
+    sku: 'BOSS-KTN50-MK2',
+    name: 'Boss Katana-50 MkII — Гитарный комбоусилитель 50 Вт',
+    category: 'guitars',
+    brand: 'Boss',
+    priceBYN: 1050,
+    rating: 4.9,
+    reviewsCount: 19,
+    inStock: false,
+    stockCount: 0,
+    image: guitarAmpImg,
+    additionalImages: [guitarAmpImg],
+    shortDesc: 'Пять усилительных характеров, 60 эффектов BOSS и режим мощности от 0,5 Вт — для дома, репетиции и сцены.',
+    fullDesc: 'Katana-50 MkII закрывает почти любой гитарный запрос: пять характеров усиления от чистого до Brown, встроенные эффекты из линейки BOSS GT, выход на наушники и запись по USB. Переключение мощности 50 / 25 / 0,5 Вт позволяет получить тот же характер звука и на сцене, и в квартире вечером.',
+    specs: [
+      { name: 'Тип', value: 'транзисторный комбоусилитель' },
+      { name: 'Мощность', value: '50 Вт (переключение 50 / 25 / 0,5 Вт)' },
+      { name: 'Динамик', value: '12 дюймов, custom' },
+      { name: 'Характеры усиления', value: '5 (Clean, Crunch, Lead, Brown, Acoustic)' },
+      { name: 'Эффекты', value: '60 вариаций BOSS, 15 одновременно' },
+      { name: 'Выходы', value: 'наушники / запись, USB' },
+      { name: 'Вес', value: '11,6 кг' }
+    ],
+    tags: ['Boss', 'комбоусилитель', 'гитарный усилитель', 'эффекты', 'для репетиций'],
+    warrantyMonths: 24,
+    reviews: []
+  },
+  {
+    id: 'prod-105',
+    sku: 'ROL-JUNODS61',
+    name: 'Roland JUNO-DS61 — Синтезатор 61 клавиша',
+    category: 'keys',
+    brand: 'Roland',
+    priceBYN: 2740,
+    rating: 4.9,
+    reviewsCount: 22,
+    inStock: true,
+    stockCount: 2,
+    image: synthImg,
+    additionalImages: [synthImg],
+    shortDesc: 'Сценическая рабочая станция: более 1000 тембров, работа от батареек, вес 5,3 кг.',
+    fullDesc: 'JUNO-DS61 сделан для тех, кто возит инструмент на площадки: лёгкий корпус, питание от батареек, быстрый доступ к тембрам и сет-листам. Более тысячи звуков библиотеки Roland, восьмидорожечный секвенсор, вокодер и вход для микрофона. Клавиатура velocity-sensitive с откликом, привычным для сценической игры.',
+    specs: [
+      { name: 'Тип', value: 'синтезатор, рабочая станция' },
+      { name: 'Клавиатура', value: '61 клавиша, velocity-sensitive' },
+      { name: 'Полифония', value: '128 голосов' },
+      { name: 'Тембры', value: 'более 1000 + расширения' },
+      { name: 'Секвенсор', value: '8 дорожек' },
+      { name: 'Питание', value: 'адаптер или 8 батареек AA' },
+      { name: 'Вес', value: '5,3 кг' }
+    ],
+    tags: ['Roland', 'синтезатор', 'JUNO', 'для сцены', 'рабочая станция'],
+    warrantyMonths: 24,
+    isPopular: true,
+    reviews: [
+      {
+        id: 'rev-105-1',
+        author: 'Сергей В.',
+        company: 'кавер-группа',
+        rating: 5,
+        date: '30.08.2026',
+        text: 'Возим на площадки каждую неделю. Лёгкий, быстро разворачивается, сет-листы переключаются одной кнопкой.',
+        verified: true
+      }
+    ]
+  },
+  {
+    id: 'prod-106',
+    sku: 'YAM-P145-B',
+    name: 'Yamaha P-145 B — Цифровое пианино 88 клавиш',
+    category: 'keys',
+    brand: 'Yamaha',
+    priceBYN: 1890,
+    badge: 'NEW',
+    rating: 4.9,
+    reviewsCount: 15,
+    inStock: true,
+    stockCount: 4,
+    image: pianoDigitalImg,
+    additionalImages: [pianoDigitalImg],
+    shortDesc: 'Молоточковая механика GHC, тембр рояля CFX, самый компактный корпус в линейке P.',
+    fullDesc: 'P-145 — цифровое пианино для дома и музыкальной школы. Клавиатура GHC с градуированным молоточковым механизмом воспроизводит ощущение акустического инструмента: в басу клавиши тяжелее, в верхнем регистре легче. Основной тембр записан с концертного рояля Yamaha CFX. Корпус компактнее предыдущих моделей серии и помещается даже в небольшой комнате.',
+    specs: [
+      { name: 'Тип', value: 'цифровое пианино' },
+      { name: 'Клавиатура', value: '88 клавиш, GHC (градуированная молоточковая)' },
+      { name: 'Полифония', value: '64 голоса' },
+      { name: 'Тембры', value: '10, основной — Yamaha CFX' },
+      { name: 'Разъёмы', value: 'наушники, USB to Host, педаль' },
+      { name: 'Габариты', value: '1326 × 295 × 154 мм' },
+      { name: 'Вес', value: '11,1 кг' }
+    ],
+    tags: ['Yamaha', 'цифровое пианино', '88 клавиш', 'молоточковая механика', 'для дома'],
+    warrantyMonths: 24,
+    isNew: true,
+    isPopular: true,
+    reviews: [
+      {
+        id: 'rev-106-1',
+        author: 'Ольга Н.',
+        rating: 5,
+        date: '05.09.2026',
+        text: 'Покупали ребёнку в музыкальную школу. Клавиши тяжёлые, как на акустическом — преподаватель одобрила. Привезли на пятый этаж без лифта.',
+        verified: true
+      }
+    ]
+  },
+  {
+    id: 'prod-107',
+    sku: 'MIL-FOCUS20-WR',
+    name: 'Millenium Focus 20 — Барабанная установка (5 предметов)',
+    category: 'drums',
+    brand: 'Millenium',
+    priceBYN: 1590,
+    oldPriceBYN: 1990,
+    badge: 'DISCOUNT',
+    discountPercent: 20,
+    rating: 4.4,
+    reviewsCount: 11,
+    inStock: true,
+    stockCount: 2,
+    image: drumsImg,
+    additionalImages: [drumsImg],
+    shortDesc: 'Полный комплект из пяти барабанов со стойками, тарелками, стулом и педалью — для старта занятий.',
+    fullDesc: 'Focus 20 — готовый набор для тех, кто начинает играть на ударных: бочка 20", том-томы, напольный том, малый барабан, комплект стоек, хай-хэт, тарелка, педаль и стул. Корпуса из тополя дают достаточно плотный звук для репетиционной точки и школьного класса. Собирается за вечер, дальше можно менять пластики и тарелки по мере роста.',
+    specs: [
+      { name: 'Тип', value: 'акустическая ударная установка' },
+      { name: 'Конфигурация', value: '5 барабанов (бочка 20", 2 тома, напольный том, малый)' },
+      { name: 'Материал корпусов', value: 'тополь' },
+      { name: 'В комплекте', value: 'стойки, хай-хэт, тарелка, педаль, стул' },
+      { name: 'Отделка', value: 'wine red' }
+    ],
+    tags: ['Millenium', 'ударная установка', 'барабаны', 'для начинающих', 'комплект'],
+    warrantyMonths: 12,
+    reviews: [
+      {
+        id: 'rev-107-1',
+        author: 'Дом культуры «Юность»',
+        company: 'Гродненская область',
+        rating: 4,
+        date: '22.08.2026',
+        text: 'Взяли для кружка. Для обучения более чем достаточно, собрали сами по инструкции. Тарелки со временем планируем поменять на что-то посерьёзнее.',
+        verified: true
+      }
+    ]
+  },
   {
     id: 'prod-1',
     sku: 'YAM-HS8-BLK',

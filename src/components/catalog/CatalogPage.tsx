@@ -76,7 +76,7 @@ export const CatalogPage: React.FC = () => {
       <div className="mb-6">
         <div className="text-xs text-slate-400 mb-2">
           <span>Главная</span> <span className="mx-1.5">•</span>{' '}
-          <span className="text-slate-700 font-bold">Каталог оборудования</span>
+          <span className="text-slate-700 font-bold">Каталог товаров</span>
         </div>
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
           <div>

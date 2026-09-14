@@ -1,7 +1,7 @@
 import React from 'react';
 import { useApp } from '../../context/AppContext';
 import { MOCK_CATEGORIES } from '../../data/mockData';
-import { Speaker, Mic, Sliders, Radio, Headphones, Volume2, Cable, ArrowRight } from 'lucide-react';
+import { Speaker, Mic, Sliders, Radio, Headphones, Volume2, Cable, ArrowRight, Guitar, Piano, Drum } from 'lucide-react';
 
 const ICON_MAP: Record<string, React.ReactNode> = {
   Speaker: <Speaker className="w-6 h-6" />,
@@ -10,7 +10,10 @@ const ICON_MAP: Record<string, React.ReactNode> = {
   Radio: <Radio className="w-6 h-6" />,
   Headphones: <Headphones className="w-6 h-6" />,
   Volume2: <Volume2 className="w-6 h-6" />,
-  Cable: <Cable className="w-6 h-6" />
+  Cable: <Cable className="w-6 h-6" />,
+  Guitar: <Guitar className="w-6 h-6" />,
+  Piano: <Piano className="w-6 h-6" />,
+  Drum: <Drum className="w-6 h-6" />
 };
 
 export const CategoriesGrid: React.FC = () => {
@@ -25,8 +28,8 @@ export const CategoriesGrid: React.FC = () => {
     <section className="max-w-7xl mx-auto px-4 py-10">
       <div className="flex items-center justify-between mb-8">
         <div>
-          <h2 className="text-2xl font-black text-slate-900 tracking-tight">Каталог оборудования</h2>
-          <p className="text-xs text-slate-500 mt-1">Официальные категории аудио и звуковой техники</p>
+          <h2 className="text-2xl font-black text-slate-900 tracking-tight">Каталог товаров</h2>
+          <p className="text-xs text-slate-500 mt-1">Инструменты, звуковое и световое оборудование — официальные поставки</p>
         </div>
         <button
           onClick={() => {

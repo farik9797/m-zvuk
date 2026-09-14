@@ -1,8 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
 import { ChevronLeft, ChevronRight, ShieldCheck, Sparkles, ArrowRight, Zap, Volume2 } from 'lucide-react';
+import guitarSlide from '../../assets/products/guitar-electric.jpg';
 
 const SLIDES = [
+  {
+    id: 0,
+    badge: 'Музыкальные инструменты',
+    title: 'Гитары, клавишные и ударные — с проверкой перед выдачей',
+    desc: 'Мастер отстраивает инструмент до того, как вы заберёте его из магазина: строй, высота струн, электроника. Рассрочка 0% и доставка по Беларуси за 1–2 дня.',
+    ctaText: 'Выбрать инструмент',
+    route: 'catalog',
+    bgImage: guitarSlide,
+    highlight: 'Отстройка бесплатно'
+  },
   {
     id: 1,
     badge: 'Специальное предложение B2B',

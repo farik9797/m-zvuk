@@ -200,6 +200,7 @@ export const Footer: React.FC = () => {
           <div>
             <p>© 2026 ООО «Арт-Медиа Трейд» (mzvuk.by). Все права защищены.</p>
             <p className="text-[11px] mt-0.5">УНП 590830372, ОКПО 295801714000 • г. Гродно, ул. 17 Сентября, 49-11. Цены указаны в BYN с НДС 20%.</p>
+            <p className="text-[11px] mt-0.5 text-slate-600">Демо-наполнение: часть фотографий — Wikimedia Commons, CC BY-SA (список авторов — src/assets/products/CREDITS.md). Перед запуском заменяются фото из карточек 1С.</p>
           </div>
 
           <div className="flex items-center gap-4 text-xs">

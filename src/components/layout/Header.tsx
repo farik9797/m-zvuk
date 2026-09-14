@@ -4,7 +4,7 @@ import { PageRoute } from '../../types';
 import { 
   Phone, Mail, MapPin, Clock, Search, ShoppingCart, Heart, 
   ArrowLeftRight, Menu, X, ChevronDown, Database, Volume2, 
-  Sparkles, ShieldCheck, Zap, Speaker, Mic, Sliders, Radio, Headphones, Cable, ArrowRight
+  Sparkles, ShieldCheck, Zap, Speaker, Mic, Sliders, Radio, Headphones, Cable, ArrowRight, Guitar, Piano, Drum
 } from 'lucide-react';
 import { MOCK_CATEGORIES } from '../../data/mockData';
 import logoUrl from '../../assets/logo.png';
@@ -128,6 +128,12 @@ export const Header: React.FC = () => {
         return <Volume2 className="w-4 h-4 text-orange-500" />;
       case 'Cable':
         return <Cable className="w-4 h-4 text-orange-500" />;
+      case 'Guitar':
+        return <Guitar className="w-4 h-4 text-orange-500" />;
+      case 'Piano':
+        return <Piano className="w-4 h-4 text-orange-500" />;
+      case 'Drum':
+        return <Drum className="w-4 h-4 text-orange-500" />;
       default:
         return <Volume2 className="w-4 h-4 text-orange-500" />;
     }
@@ -198,7 +204,7 @@ export const Header: React.FC = () => {
               ООО «Арт-Медиа Трейд»
             </span>
             <span className="text-[11px] font-semibold text-slate-500 tracking-wider uppercase block mt-1">
-              mzvuk.by • Аудио системный интегратор
+              mzvuk.by • Инструменты и звуковое оборудование
             </span>
           </div>
         </div>
