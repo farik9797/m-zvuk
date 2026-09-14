@@ -1,10 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { useApp } from '../../context/AppContext';
 import { PageRoute } from '../../types';
-import { 
-  Phone, Mail, MapPin, Clock, Search, ShoppingCart, Heart, 
-  ArrowLeftRight, Menu, X, ChevronDown, Database, Volume2, 
-  Sparkles, ShieldCheck, Zap, Speaker, Mic, Sliders, Radio, Headphones, Cable, ArrowRight, Guitar, Piano, Drum
+import {
+  Phone, Mail, MapPin, Search, ShoppingCart, Heart, ArrowLeftRight, Menu, X, ChevronDown, Database, Volume2, Speaker, Mic, Sliders, Radio, Headphones, Cable, ArrowRight, Guitar, Piano, Drum
 } from 'lucide-react';
 import { MOCK_CATEGORIES, getCategoryProductCount } from '../../data/mockData';
 import logoUrl from '../../assets/logo.png';
@@ -477,7 +475,6 @@ export const Header: React.FC = () => {
                       }`}
                     >
                       <span>Сертификаты и документы</span>
-                      <ShieldCheck className="w-3.5 h-3.5 text-emerald-500" />
                     </button>
                     <button
                       onClick={() => {
@@ -489,7 +486,6 @@ export const Header: React.FC = () => {
                       }`}
                     >
                       <span>Бренды и партнеры</span>
-                      <Zap className="w-3.5 h-3.5 text-amber-500" />
                     </button>
                   </div>
 
