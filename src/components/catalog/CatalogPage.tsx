@@ -1,8 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useApp } from '../../context/AppContext';
 import { CatalogFilterSidebar } from './CatalogFilterSidebar';
 import { ProductCard } from './ProductCard';
 import { QuickViewModal } from './QuickViewModal';
+import { Pagination } from '../common/Pagination';
 import { Product } from '../../types';
 import { MOCK_CATEGORIES } from '../../data/mockData';
 import { LayoutGrid, List, SlidersHorizontal, X, ArrowUpDown } from 'lucide-react';
@@ -12,6 +13,9 @@ export const CatalogPage: React.FC = () => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
   const [quickViewProduct, setQuickViewProduct] = useState<Product | null>(null);
   const [isMobileFilterOpen, setIsMobileFilterOpen] = useState(false);
+  const [page, setPage] = useState(1);
+  const [perPage, setPerPage] = useState(24);
+  const listTopRef = useRef<HTMLDivElement>(null);
 
   // Apply Filters
   let filtered = products.filter(product => {
@@ -64,6 +68,34 @@ export const CatalogPage: React.FC = () => {
     if (filters.sortBy === 'newest') return (b.isNew ? 1 : 0) - (a.isNew ? 1 : 0);
     return (b.reviewsCount || 0) - (a.reviewsCount || 0); // default popularity
   });
+
+  // Пагинация: без неё каталог рисовал все позиции сразу — на выгрузке из 1С
+  // (12 400 товаров) это положило бы страницу.
+  const totalPages = Math.max(1, Math.ceil(filtered.length / perPage));
+  const currentPage = Math.min(page, totalPages);
+  const pageItems = filtered.slice((currentPage - 1) * perPage, currentPage * perPage);
+  const firstShown = filtered.length === 0 ? 0 : (currentPage - 1) * perPage + 1;
+  const lastShown = Math.min(currentPage * perPage, filtered.length);
+
+  // Любая смена фильтров, сортировки или поиска возвращает на первую страницу
+  useEffect(() => {
+    setPage(1);
+  }, [
+    filters.category,
+    filters.searchQuery,
+    filters.sortBy,
+    filters.onlyInStock,
+    filters.selectedBrands.join(','),
+    filters.badges.join(','),
+    filters.priceRange[0],
+    filters.priceRange[1],
+    perPage,
+  ]);
+
+  const goToPage = (next: number) => {
+    setPage(Math.min(Math.max(1, next), totalPages));
+    listTopRef.current?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  };
 
   const activeCategoryName =
     filters.category === 'all'
@@ -217,6 +249,7 @@ export const CatalogPage: React.FC = () => {
           )}
 
           {/* Catalog Results Grid */}
+          <div ref={listTopRef} className="scroll-mt-28" />
           {filtered.length === 0 ? (
             <div className="bg-white rounded-2xl p-12 text-center border border-slate-200 space-y-3">
               <h3 className="text-lg font-bold text-slate-800">Товары не найдены</h3>
@@ -238,7 +271,7 @@ export const CatalogPage: React.FC = () => {
                   : 'grid-cols-1'
               }`}
             >
-              {filtered.map(product => (
+              {pageItems.map(product => (
                 <ProductCard
                   key={product.id}
                   product={product}
@@ -246,6 +279,32 @@ export const CatalogPage: React.FC = () => {
                 />
               ))}
             </div>
+          )}
+
+          {filtered.length > 0 && (
+            <>
+              <Pagination page={currentPage} totalPages={totalPages} onChange={goToPage} />
+              <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 pt-4 text-xs text-slate-500">
+                <span>
+                  Показано <strong className="text-slate-700">{firstShown}–{lastShown}</strong> из{' '}
+                  <strong className="text-slate-700">{filtered.length}</strong>
+                </span>
+                <span className="flex items-center gap-2">
+                  На странице:
+                  {[12, 24, 48].map(n => (
+                    <button
+                      key={n}
+                      onClick={() => setPerPage(n)}
+                      className={`px-2 py-1 rounded-lg font-bold transition-colors ${
+                        perPage === n ? 'bg-slate-900 text-white' : 'hover:text-orange-600'
+                      }`}
+                    >
+                      {n}
+                    </button>
+                  ))}
+                </span>
+              </div>
+            </>
           )}
         </div>
       </div>
