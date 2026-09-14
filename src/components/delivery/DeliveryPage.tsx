@@ -16,7 +16,7 @@ export const DeliveryPage: React.FC = () => {
           Доставка и Оплата по Республике Беларусь
         </h1>
         <p className="text-xs text-slate-600">
-          Оперативная отгрузка профессионального аудиооборудования со склада в Минске
+          Оперативная отгрузка профессионального аудиооборудования со склада в Гродно
         </p>
       </div>
 
@@ -26,7 +26,7 @@ export const DeliveryPage: React.FC = () => {
           <div className="p-3 bg-orange-50 text-orange-600 rounded-2xl w-fit">
             <Truck className="w-8 h-8" />
           </div>
-          <h2 className="text-base font-bold text-slate-900">Доставка по Минску</h2>
+          <h2 className="text-base font-bold text-slate-900">Доставка по Гродно</h2>
           <p className="text-xs text-slate-600 leading-relaxed">
             Курьерская доставка собственной службой mzvuk.by день-в-день при оформлении заказа до 12:00.
           </p>
@@ -54,7 +54,7 @@ export const DeliveryPage: React.FC = () => {
           </div>
           <h2 className="text-base font-bold text-slate-900">Самовывоз со склада</h2>
           <p className="text-xs text-slate-600 leading-relaxed">
-            Выдача заказов в складском комплексе ООО «Арт-Медиа Трейд» в Минске с 09:00 до 18:00 с проверкой комплектации.
+            Выдача заказов в складском комплексе ООО «Арт-Медиа Трейд» в Гродно с 10:00 до 19:00 с проверкой комплектации.
           </p>
           <div className="text-xs font-bold text-emerald-600 bg-emerald-50 p-2.5 rounded-xl">
             Бесплатно для любых сумм

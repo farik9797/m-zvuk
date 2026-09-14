@@ -1,1 +1,23 @@
 @import "tailwindcss";
+
+/* Фирменная палитра М-ЗВУК.
+   В макете акцент был оранжевым; логотип заказчика задаёт красный #E22B2B,
+   поэтому шкала orange-* переопределена под бренд — без правки 397 классов в компонентах. */
+@theme {
+  --color-orange-50:  #FDF3F3;
+  --color-orange-100: #FBE2E2;
+  --color-orange-200: #F6C3C3;
+  --color-orange-300: #EF9797;
+  --color-orange-400: #E85E5E;
+  --color-orange-500: #E22B2B;  /* основной фирменный */
+  --color-orange-600: #C01F1F;
+  --color-orange-700: #A01A1A;
+  --color-orange-800: #831818;
+  --color-orange-900: #6D1717;
+  --color-orange-950: #3C0A0A;
+
+  /* амбер встречается в градиентах рядом с акцентом — уводим в тот же красный ряд */
+  --color-amber-400: #EF6A6A;
+  --color-amber-500: #D93A3A;
+  --color-amber-600: #B01D1D;
+}

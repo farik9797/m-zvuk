@@ -165,7 +165,7 @@ export const ProductDetailPage: React.FC = () => {
                 <ShieldCheck className="w-5 h-5 text-orange-600 shrink-0" />
                 <div>
                   <span className="font-bold text-slate-800 block">Официальная гарантия</span>
-                  <span className="text-slate-500">{selectedProduct.warrantyMonths} месяцев в Минске</span>
+                  <span className="text-slate-500">{selectedProduct.warrantyMonths} месяцев в Гродно</span>
                 </div>
               </div>
               <div className="flex items-center gap-2">

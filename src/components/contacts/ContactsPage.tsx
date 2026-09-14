@@ -20,7 +20,7 @@ export const ContactsPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 py-10 animate-fade-in space-y-10">
       <div className="text-center max-w-2xl mx-auto space-y-2">
         <span className="text-xs font-bold text-orange-600 uppercase tracking-widest bg-orange-100 px-3 py-1 rounded-full">
-          mzvuk.by в Минске
+          mzvuk.by в Гродно
         </span>
         <h1 className="text-3xl font-black text-slate-900 tracking-tight">
           Контакты и реквизиты ООО «Арт-Медиа Трейд»
@@ -84,9 +84,9 @@ export const ContactsPage: React.FC = () => {
                 <MapPin className="w-5 h-5" />
               </div>
               <div>
-                <span className="text-[10px] font-bold text-slate-400 uppercase">Офис и шоурум в Минске</span>
+                <span className="text-[10px] font-bold text-slate-400 uppercase">Магазин и склад в Гродно</span>
                 <span className="text-xs font-bold text-slate-900 block">
-                  г. Минск, Республика Беларусь
+                  230023, г. Гродно, ул. 17 Сентября, 49-11
                 </span>
               </div>
             </div>

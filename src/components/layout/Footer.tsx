@@ -5,6 +5,7 @@ import {
   Volume2, Phone, Mail, MapPin, Clock, Send, ShieldCheck, 
   CreditCard, CheckCircle2, FileText, ArrowUp 
 } from 'lucide-react';
+import logoUrl from '../../assets/logo.png';
 import { MOCK_CATEGORIES } from '../../data/mockData';
 
 export const Footer: React.FC = () => {
@@ -63,7 +64,7 @@ export const Footer: React.FC = () => {
             </div>
             <div>
               <h4 className="text-sm font-bold text-white">Собственный сервис</h4>
-              <p className="text-xs text-slate-400">Авторизованный ремонт в Минске</p>
+              <p className="text-xs text-slate-400">Авторизованный ремонт в Гродно</p>
             </div>
           </div>
         </div>
@@ -76,12 +77,10 @@ export const Footer: React.FC = () => {
               onClick={() => setRoute('home')}
               className="flex items-center gap-3 cursor-pointer"
             >
-              <div className="w-10 h-10 rounded-xl bg-orange-600 flex items-center justify-center text-white font-bold">
-                <Volume2 className="w-6 h-6" />
-              </div>
+              <img src={logoUrl} alt="М-ЗВУК" className="h-10 w-auto" />
               <div>
-                <span className="text-xl font-extrabold text-white block leading-none">
-                  ООО «Арт-Медиа <span className="text-orange-500">Трейд»</span>
+                <span className="text-base font-extrabold text-white block leading-none">
+                  ООО «Арт-Медиа Трейд»
                 </span>
                 <span className="text-xs text-slate-400">Официальный сайт mzvuk.by</span>
               </div>
@@ -92,6 +91,10 @@ export const Footer: React.FC = () => {
             </p>
 
             <div className="space-y-2 text-xs text-slate-300 pt-2">
+              <a href="tel:+375152623333" className="flex items-center gap-2 hover:text-orange-400 font-bold">
+                <Phone className="w-4 h-4 text-orange-500" />
+                +375 (152) 62-33-33
+              </a>
               <a href="tel:+375333772873" className="flex items-center gap-2 hover:text-orange-400 font-bold">
                 <Phone className="w-4 h-4 text-orange-500" />
                 +375 (33) 377-28-73
@@ -102,11 +105,11 @@ export const Footer: React.FC = () => {
               </a>
               <p className="flex items-center gap-2 text-slate-400">
                 <MapPin className="w-4 h-4 text-slate-400" />
-                Республика Беларусь, г. Минск
+                г. Гродно, ул. 17 Сентября, 49-11
               </p>
               <p className="flex items-center gap-2 text-slate-400">
                 <Clock className="w-4 h-4 text-slate-400" />
-                Пн-Пт: 09:00 - 18:00 (Сб-Вс: выходной)
+                Пн-Пт: 10:00 - 19:00, Сб: 10:00 - 16:00
               </p>
             </div>
           </div>
@@ -196,7 +199,7 @@ export const Footer: React.FC = () => {
         <div className="pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-xs text-slate-500">
           <div>
             <p>© 2026 ООО «Арт-Медиа Трейд» (mzvuk.by). Все права защищены.</p>
-            <p className="text-[11px] mt-0.5">УНП 193... • Зарегистрировано Минским горисполкомом. Цены указаны в BYN с НДС 20%.</p>
+            <p className="text-[11px] mt-0.5">УНП 590830372, ОКПО 295801714000 • г. Гродно, ул. 17 Сентября, 49-11. Цены указаны в BYN с НДС 20%.</p>
           </div>
 
           <div className="flex items-center gap-4 text-xs">

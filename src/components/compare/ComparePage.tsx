@@ -120,7 +120,7 @@ export const ComparePage: React.FC = () => {
               </tr>
 
               <tr className="font-bold">
-                <td className="p-4 text-slate-700">Гарантия в Минске</td>
+                <td className="p-4 text-slate-700">Гарантия в Гродно</td>
                 {comparedProducts.map(p => (
                   <td key={p.id} className="p-4 font-bold text-slate-900">
                     {p.warrantyMonths} мес.

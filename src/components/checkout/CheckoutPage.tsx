@@ -18,7 +18,7 @@ export const CheckoutPage: React.FC = () => {
   const [bankAccount, setBankAccount] = useState('BY00AKBB30120000000000000000');
 
   // Address & Delivery
-  const [city, setCity] = useState('Минск');
+  const [city, setCity] = useState('Гродно');
   const [address, setAddress] = useState('');
   const [deliveryMethod, setDeliveryMethod] = useState('courier');
   const [paymentMethod, setPaymentMethod] = useState('bank_transfer');
@@ -101,7 +101,7 @@ export const CheckoutPage: React.FC = () => {
               </span>
               <p className="text-xs text-slate-500 mt-1">
                 Поставщик: ООО «Арт-Медиа Трейд», УНП 193... <br />
-                220000, Республика Беларусь, г. Минск
+                220000, г. Гродно, ул. 17 Сентября, 49-11
               </p>
             </div>
             <div className="text-right">
@@ -362,7 +362,7 @@ export const CheckoutPage: React.FC = () => {
                   required
                   value={city}
                   onChange={e => setCity(e.target.value)}
-                  placeholder="Минск"
+                  placeholder="Гродно"
                   className="w-full p-3 bg-slate-50 border border-slate-200 rounded-xl outline-none focus:border-orange-500 font-semibold"
                 />
               </div>

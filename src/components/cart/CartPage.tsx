@@ -138,7 +138,7 @@ export const CartPage: React.FC = () => {
               </span>
             </div>
             <div className="flex justify-between">
-              <span>Доставка по Минску / РБ:</span>
+              <span>Доставка по Гродно / РБ:</span>
               <span className="font-bold text-emerald-600">Бесплатно при заказе от 500 BYN</span>
             </div>
 

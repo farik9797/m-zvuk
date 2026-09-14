@@ -55,7 +55,7 @@ export const AboutPage: React.FC = () => {
             </li>
             <li className="flex items-center gap-2">
               <CheckCircle2 className="w-4 h-4 text-emerald-500 shrink-0" />
-              <span>Собственный сервисный центр по ремонту звукового оборудования в Минске</span>
+              <span>Собственный сервисный центр по ремонту звукового оборудования в Гродно</span>
             </li>
           </ul>
         </div>
@@ -83,7 +83,7 @@ export const AboutPage: React.FC = () => {
             </div>
             <div className="flex justify-between">
               <span className="text-slate-500">Адрес:</span>
-              <span className="font-bold">г. Минск, Республика Беларусь</span>
+              <span className="font-bold">230023, г. Гродно, ул. 17 Сентября, 49-11</span>
             </div>
             <div className="flex justify-between">
               <span className="text-slate-500">Телефон:</span>

@@ -126,7 +126,7 @@ export const DataSyncModal: React.FC = () => {
                   <span>Синхронизация с 1С:Предприятие</span>
                 </div>
                 <p className="text-xs text-slate-600">
-                  Обновление остатков на складе в Минске и цен с НДС через CommerceML 2.0 API.
+                  Обновление остатков на складе в Гродно и цен с НДС через CommerceML 2.0 API.
                 </p>
                 <button
                   onClick={handle1CSyncSimulation}

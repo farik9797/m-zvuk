@@ -20,7 +20,7 @@ export const ProductShowcase: React.FC = () => {
       <div className="flex flex-col md:flex-row md:items-center justify-between gap-4 mb-8">
         <div>
           <h2 className="text-2xl font-black text-slate-900 tracking-tight">Популярное оборудование</h2>
-          <p className="text-xs text-slate-500 mt-1">Официальные поставки со склада в Минске</p>
+          <p className="text-xs text-slate-500 mt-1">Официальные поставки со склада в Гродно</p>
         </div>
 
         {/* Tab Selector */}

@@ -7,6 +7,7 @@ import {
   Sparkles, ShieldCheck, Zap, Speaker, Mic, Sliders, Radio, Headphones, Cable, ArrowRight
 } from 'lucide-react';
 import { MOCK_CATEGORIES } from '../../data/mockData';
+import logoUrl from '../../assets/logo.png';
 
 export const Header: React.FC = () => {
   const { 
@@ -148,7 +149,7 @@ export const Header: React.FC = () => {
             </a>
             <span className="hidden md:flex items-center gap-1 text-slate-400">
               <MapPin className="w-3.5 h-3.5" />
-              г. Минск • Пн-Пт: 09:00 - 18:00
+              г. Гродно, ул. 17 Сентября, 49-11 • Пн-Сб
             </span>
             <span className="hidden lg:inline-block px-2 py-0.5 rounded bg-orange-500/10 text-orange-400 text-[11px] font-bold border border-orange-500/20">
               Работаем с НДС 20% для Юридических Лиц
@@ -191,14 +192,12 @@ export const Header: React.FC = () => {
           onClick={() => setRoute('home')}
           className="flex items-center gap-3 cursor-pointer group shrink-0"
         >
-          <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-orange-500 to-amber-600 flex items-center justify-center text-white shadow-md shadow-orange-500/20 group-hover:scale-105 transition-transform">
-            <Volume2 className="w-6 h-6" />
-          </div>
-          <div>
-            <span className="text-xl font-extrabold tracking-tight text-slate-900 block leading-none">
-              Арт-Медиа <span className="text-orange-600">Трейд</span>
+          <img src={logoUrl} alt="М-ЗВУК" className="h-10 w-auto group-hover:scale-105 transition-transform" />
+          <div className="hidden sm:block">
+            <span className="text-sm font-extrabold tracking-tight text-slate-900 block leading-none">
+              ООО «Арт-Медиа Трейд»
             </span>
-            <span className="text-[11px] font-semibold text-slate-500 tracking-wider uppercase block mt-0.5">
+            <span className="text-[11px] font-semibold text-slate-500 tracking-wider uppercase block mt-1">
               mzvuk.by • Аудио системный интегратор
             </span>
           </div>

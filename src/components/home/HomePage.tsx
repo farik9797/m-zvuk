@@ -174,7 +174,7 @@ export const HomePage: React.FC = () => {
                 <div className="p-2 bg-orange-500/20 text-orange-400 rounded-lg">
                   <Phone className="w-4 h-4" />
                 </div>
-                <span>+375 (33) 377-28-73 (Минск)</span>
+                <span>+375 (33) 377-28-73 (Гродно)</span>
               </a>
               <a href="mailto:sales@mzvuk.by" className="flex items-center gap-3 hover:text-orange-400">
                 <div className="p-2 bg-slate-800 text-slate-300 rounded-lg">
