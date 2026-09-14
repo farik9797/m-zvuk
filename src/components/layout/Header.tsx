@@ -458,19 +458,18 @@ export const Header: React.FC = () => {
                         setRoute('about');
                         setIsAboutDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2.5 hover:bg-orange-50 hover:text-orange-600 transition-colors flex items-center justify-between text-xs ${
+                      className={`w-full text-left px-4 py-2.5 hover:bg-orange-50 hover:text-orange-600 transition-colors text-xs ${
                         route === 'about' ? 'text-orange-600 font-bold bg-orange-50/60' : 'text-slate-700'
                       }`}
                     >
                       <span>О нас и история</span>
-                      <span className="text-[12px] text-slate-500 font-normal">mzvuk.by</span>
                     </button>
                     <button
                       onClick={() => {
                         setRoute('certificates');
                         setIsAboutDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2.5 hover:bg-orange-50 hover:text-orange-600 transition-colors flex items-center justify-between text-xs ${
+                      className={`w-full text-left px-4 py-2.5 hover:bg-orange-50 hover:text-orange-600 transition-colors text-xs ${
                         route === 'certificates' ? 'text-orange-600 font-bold bg-orange-50/60' : 'text-slate-700'
                       }`}
                     >
@@ -481,7 +480,7 @@ export const Header: React.FC = () => {
                         setRoute('partners');
                         setIsAboutDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2.5 hover:bg-orange-50 hover:text-orange-600 transition-colors flex items-center justify-between text-xs ${
+                      className={`w-full text-left px-4 py-2.5 hover:bg-orange-50 hover:text-orange-600 transition-colors text-xs ${
                         route === 'partners' ? 'text-orange-600 font-bold bg-orange-50/60' : 'text-slate-700'
                       }`}
                     >
@@ -495,24 +494,22 @@ export const Header: React.FC = () => {
                         setRoute('news');
                         setIsAboutDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2.5 hover:bg-orange-50 hover:text-orange-600 transition-colors flex items-center justify-between text-xs ${
+                      className={`w-full text-left px-4 py-2.5 hover:bg-orange-50 hover:text-orange-600 transition-colors text-xs ${
                         route === 'news' ? 'text-orange-600 font-bold bg-orange-50/60' : 'text-slate-700'
                       }`}
                     >
                       <span>Новости и статьи</span>
-                      <span className="text-[12px] bg-orange-100 text-orange-700 font-bold px-1.5 py-0.5 rounded">NEW</span>
                     </button>
                     <button
                       onClick={() => {
                         setRoute('faq');
                         setIsAboutDropdownOpen(false);
                       }}
-                      className={`w-full text-left px-4 py-2.5 hover:bg-orange-50 hover:text-orange-600 transition-colors flex items-center justify-between text-xs ${
+                      className={`w-full text-left px-4 py-2.5 hover:bg-orange-50 hover:text-orange-600 transition-colors text-xs ${
                         route === 'faq' ? 'text-orange-600 font-bold bg-orange-50/60' : 'text-slate-700'
                       }`}
                     >
                       <span>Вопрос-ответ (FAQ)</span>
-                      <span className="text-[12px] text-slate-500 font-normal">Помощь</span>
                     </button>
                   </div>
                 </div>
