@@ -518,15 +518,14 @@ export const Header: React.FC = () => {
       {/* Mobile Drawer Navigation */}
       {isMobileMenuOpen && (
         <div className="lg:hidden bg-slate-900 text-white p-4 border-t border-slate-800 space-y-3 animate-fade-in">
-          <div className="relative mb-3">
+          <div className="mb-3">
             <input
               type="text"
               value={searchQuery}
               onChange={e => setSearchQuery(e.target.value)}
               placeholder="Поиск по сайту..."
-              className="w-full pl-9 pr-4 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white outline-none"
+              className="w-full px-4 py-2 bg-slate-800 border border-slate-700 rounded-xl text-xs text-white outline-none"
             />
-            <Search className="w-4 h-4 text-slate-400 absolute left-3 top-2.5" />
           </div>
 
           <div className="grid grid-cols-1 gap-1 text-sm font-semibold">
